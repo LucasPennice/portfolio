@@ -12,7 +12,7 @@ export default () => {
 				'Built a landing page for a subscription based wine business',
 				'Used JavaScript to create a custom menu, image slider and mocked customers reviews that change on every refresh using RandomUser’s API',
 			],
-			d1: 'url1',
+			d1: 'https://github.com/LucasPennice/portfolio/blob/master/ProjectImages/WineStore%20Desktop%201.png?raw=true',
 			d2: 'url2',
 			m1: 'ururu',
 			m2: 'jajaj',
