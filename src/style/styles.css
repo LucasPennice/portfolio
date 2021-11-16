@@ -669,28 +669,28 @@
   padding-left: clamp(1rem, 4vw, 4rem);
 }
 
-.projectContainer .projectText .projectTitle {
+.projectContainer .projectTitle {
   font-weight: 200;
   font-size: clamp(1rem, 4vw, 3.5rem);
   text-transform: lowercase;
   margin-bottom: clamp(1rem, 4vw, 4rem);
 }
 
-.projectContainer .projectText .projectArrayContainer .projectParagraph {
+.projectContainer .projectArrayContainer .projectParagraph {
   text-transform: lowercase;
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
   margin-bottom: clamp(1rem, 4vw, 3rem);
 }
 
-.projectContainer .projectText .linksContainer {
-  font-size: clamp(1rem, 4vw, 4rem);
+.projectContainer .linksContainer {
+  font-size: clamp(1.5rem, 4vw, 4rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: clamp(1rem, 4vw, 2rem);
 }
 
-.projectContainer .projectText .linksContainer .swapButton {
+.projectContainer .linksContainer .swapButton {
   font-size: clamp(1rem, 4vw, 3rem);
   border: none;
   background-color: transparent;
@@ -699,50 +699,33 @@
   transition: 0.2s;
 }
 
-.projectContainer .projectText .linksContainer .swapButton:hover {
+.projectContainer .linksContainer .swapButton:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
-.projectContainer .projectText .linksContainer a {
+.projectContainer .linksContainer a {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   color: #252627;
 }
 
-.projectContainer .projectText .linksContainer a:hover {
+.projectContainer .linksContainer a:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
-.projectContainer .projectImages {
+.projectImages {
   width: 55%;
   position: relative;
 }
 
-.projectContainer .projectImages .changeImgBtn {
-  border: none;
-  background-color: transparent;
-  font-size: clamp(1rem, 4vw, 3rem);
+.projectImages .desktopImages {
   position: absolute;
-  top: 40%;
-  right: 40%;
-  cursor: pointer;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-.projectContainer .projectImages .changeImgBtn:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-.projectContainer .projectImages .desktopImages {
-  position: absolute;
-  right: 20%;
-  top: 50%;
-  width: clamp(3.2rem, 46vw, 640px);
-  height: clamp(1.8rem, 25vw, 330px);
+  right: clamp(10%, 10vw, 20%);
+  top: clamp(40%, 10vw, 50%);
+  width: clamp(12.8rem, 41vw, 640px);
+  height: clamp(7.2rem, 20vw, 330px);
   background-color: white;
   border: 1px solid #252627;
   -webkit-transition: 0.2s;
@@ -750,7 +733,7 @@
   cursor: pointer;
 }
 
-.projectContainer .projectImages .mobileImages {
+.projectImages .mobileImages {
   cursor: pointer;
   position: absolute;
   -webkit-transition: 0.2s;
@@ -758,8 +741,8 @@
   right: 10%;
   border: 1px solid #252627;
   top: 10%;
-  width: clamp(1rem, 20vw, 250px);
-  height: clamp(2.16rem, 43.2vw, 541px);
+  width: clamp(6rem, 16vw, 250px);
+  height: clamp(15.28rem, 39.2vw, 541px);
   background-color: white;
 }
 
@@ -781,12 +764,26 @@
   filter: blur(5px);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 660px) {
   .projectContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .projectContainer .projectText {
+    width: 100%;
+  }
+  .projectContainer .projectImages {
+    width: 100%;
+  }
+  .projectContainer .projectImages .desktopImages {
+    right: 100px;
+    top: 50px;
+  }
+  .projectContainer .projectImages .mobileImages {
+    right: 10%;
+    top: -80px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -49,15 +49,6 @@
 		@include center;
 		position: relative;
 
-		// .selectedDiv {
-		// 	width: 218px;
-		// 	height: 100px;
-		// 	background-color: transparent;
-		// 	border: 1px solid #707070;
-		// 	position: absolute;
-		// 	left: 35.3%;
-		// }
-
 		a {
 			padding: 0px clamp(15px, 3vw, 50px);
 			border-style: none solid none none;
@@ -95,6 +86,7 @@
 	display: flex;
 	height: 100%;
 	gap: 3rem;
+
 	.projectText {
 		font-weight: 200;
 		// background-color: rgb(255, 255, 255);
@@ -103,66 +95,38 @@
 		padding-top: clamp(1rem, 4vw, 8rem);
 		// padding-left: 4rem;
 		padding-left: clamp(1rem, 4vw, 4rem);
+	}
+	.projectTitle {
+		font-weight: 200;
+		// font-size: 3.5rem;
+		font-size: clamp(1rem, 4vw, 3.5rem);
+		text-transform: lowercase;
+		// margin-bottom: 4rem;
+		margin-bottom: clamp(1rem, 4vw, 4rem);
+	}
 
-		.projectTitle {
-			font-weight: 200;
-			// font-size: 3.5rem;
-			font-size: clamp(1rem, 4vw, 3.5rem);
+	.projectArrayContainer {
+		.projectParagraph {
 			text-transform: lowercase;
-			// margin-bottom: 4rem;
-			margin-bottom: clamp(1rem, 4vw, 4rem);
-		}
-
-		.projectArrayContainer {
-			.projectParagraph {
-				text-transform: lowercase;
-				// font-size: 2rem;
-				font-size: clamp(1rem, 2vw, 1.5rem);
-				// margin-bottom: 3rem;
-				margin-bottom: clamp(1rem, 4vw, 3rem);
-			}
-		}
-
-		.linksContainer {
-			// font-size: 4rem;
-			font-size: clamp(1rem, 4vw, 4rem);
-			display: flex;
-			// gap: 3rem;
-			gap: clamp(1rem, 4vw, 2rem);
-
-			.swapButton {
-				// font-size: 3rem;
-				font-size: clamp(1rem, 4vw, 3rem);
-				border: none;
-				background-color: transparent;
-				cursor: pointer;
-				transition: 0.2s;
-
-				&:hover {
-					transform: scale(1.05);
-				}
-			}
-			a {
-				transition: 0.2s;
-				color: #252627;
-				&:hover {
-					transform: scale(1.05);
-				}
-			}
+			// font-size: 2rem;
+			font-size: clamp(0.8rem, 2vw, 1.5rem);
+			// margin-bottom: 3rem;
+			margin-bottom: clamp(1rem, 4vw, 3rem);
 		}
 	}
 
-	.projectImages {
-		width: 55%;
-		position: relative;
+	.linksContainer {
+		// font-size: 4rem;
+		font-size: clamp(1.5rem, 4vw, 4rem);
+		display: flex;
+		// gap: 3rem;
+		gap: clamp(1rem, 4vw, 2rem);
 
-		.changeImgBtn {
+		.swapButton {
+			// font-size: 3rem;
+			font-size: clamp(1rem, 4vw, 3rem);
 			border: none;
 			background-color: transparent;
-			font-size: clamp(1rem, 4vw, 3rem);
-			position: absolute;
-			top: 40%;
-			right: 40%;
 			cursor: pointer;
 			transition: 0.2s;
 
@@ -170,33 +134,47 @@
 				transform: scale(1.05);
 			}
 		}
+		a {
+			transition: 0.2s;
+			color: #252627;
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+	}
+}
 
-		.desktopImages {
-			position: absolute;
-			right: 20%;
-			top: 50%;
-			// width: calc(2560px / 4);
-			width: clamp(3.2rem, 46vw, 640px);
-			// height: calc(1321px / 4);
-			height: clamp(1.8rem, 25vw, 330px);
-			background-color: white;
-			border: 1px solid #252627;
-			transition: 0.2s;
-			cursor: pointer;
-		}
-		.mobileImages {
-			cursor: pointer;
-			position: absolute;
-			transition: 0.2s;
-			right: 10%;
-			border: 1px solid #252627;
-			top: 10%;
-			// width: calc(375px / 1.5);
-			width: clamp(1rem, 20vw, 250px); //1
-			// height: calc(812px / 1.5);
-			height: clamp(2.16rem, 43.2vw, 541px); //2.16
-			background-color: white;
-		}
+.projectImages {
+	width: 55%;
+	position: relative;
+
+	.desktopImages {
+		position: absolute;
+		// right: 20%;
+		right: clamp(10%, 10vw, 20%);
+		// top: 50%;
+		top: clamp(40%, 10vw, 50%);
+		// width: calc(2560px / 4);
+		width: clamp(12.8rem, 41vw, 640px);
+		// height: calc(1321px / 4);
+		height: clamp(7.2rem, 20vw, 330px);
+		background-color: white;
+		border: 1px solid #252627;
+		transition: 0.2s;
+		cursor: pointer;
+	}
+	.mobileImages {
+		cursor: pointer;
+		position: absolute;
+		transition: 0.2s;
+		right: 10%;
+		border: 1px solid #252627;
+		top: 10%;
+		// width: calc(375px / 1.5);
+		width: clamp(6rem, 16vw, 250px); //1
+		// height: calc(812px / 1.5);
+		height: clamp(15.28rem, 39.2vw, 541px); //2.16
+		background-color: white;
 	}
 }
 
@@ -216,8 +194,26 @@
 	-webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
 	filter: blur(5px);
 }
-@media (max-width: 700px) {
+
+@media (max-width: 660px) {
 	.projectContainer {
 		flex-direction: column;
+
+		.projectText {
+			width: 100%;
+		}
+
+		.projectImages {
+			width: 100%;
+
+			.desktopImages {
+				right: 100px;
+				top: 50px;
+			}
+			.mobileImages {
+				right: 10%;
+				top: -80px;
+			}
+		}
 	}
 }

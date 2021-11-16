@@ -23,7 +23,7 @@ export default () => {
 		d1: 'https://github.com/LucasPennice/portfolio/blob/master/ProjectImages/ShowSearch_Desktop.png?raw=true',
 		d2: 'https://github.com/LucasPennice/portfolio/blob/master/ProjectImages/ShowSearch_Mobile.png?raw=true',
 		m1: 'https://github.com/LucasPennice/portfolio/blob/master/ProjectImages/ShowSearch_Mobile1.jpg?raw=true',
-		m2: 'https://github.com/LucasPennice/portfolio/blob/master/ProjectImages/WineStore_Mobile_2.png?raw=true',
+		m2: 'https://github.com/LucasPennice/portfolio/blob/master/ProjectImages/ShowSearch_Mobile_2.png?raw=true',
 		github: 'https://github.com/LucasPennice/React-Redux-ShowSearch',
 		live: 'https://react-redux-show-search.vercel.app/',
 	};
@@ -37,7 +37,7 @@ export default () => {
 		d1: 'https://github.com/LucasPennice/portfolio/blob/master/ProjectImages/WeatherApp_Desktop_2.png?raw=true',
 		d2: 'https://github.com/LucasPennice/portfolio/blob/master/ProjectImages/WeatherApp_Desktop.png?raw=true',
 		m1: 'https://github.com/LucasPennice/portfolio/blob/master/ProjectImages/WeatherApp_Mobile_2.png?raw=true',
-		m2: 'https://github.com/LucasPennice/portfolio/blob/master/ProjectImages/WineStore_Mobile_2.png?raw=true',
+		m2: 'https://github.com/LucasPennice/portfolio/blob/master/ProjectImages/WeatherApp_Mobile.png?raw=true',
 		github: 'https://github.com/LucasPennice/React-ReduxWeatherApp',
 		live: 'https://react-redux-weather-app-iota.vercel.app/',
 	};
