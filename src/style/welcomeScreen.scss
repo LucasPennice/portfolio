@@ -1,0 +1,159 @@
+.welcomeDiv {
+	height: 100vh;
+	@include center;
+	background-color: #f9f9f9;
+	flex-direction: column;
+	position: relative;
+
+	.welcomeScreenTextContainer {
+		// background-color: rgba(0, 128, 128, 0.281);
+		position: absolute;
+		top: 150px;
+		@include center;
+		cursor: default;
+		flex-direction: column;
+
+		.lucasPennice {
+			color: rgba(37, 38, 39, 0.83); //PonerOpacity 83%
+			opacity: 0.92;
+			font-weight: 200;
+			text-transform: uppercase;
+			position: relative;
+			// font-size: 70px;
+			font-size: clamp(17px, 4vw, 70px);
+			// letter-spacing: 25px;
+			letter-spacing: clamp(10px, 3vw, 25px);
+			text-indent: clamp(10px, 3vw, 25px);
+			transition: 0.2s ease-in-out;
+			text-shadow: 0px 12px 8px rgba(110, 126, 133, 0.2); //15%
+			animation: colorLock 2s;
+			&:before {
+				content: '';
+				transition: 0.2s ease-in-out;
+				z-index: -1;
+				position: absolute;
+				right: 0;
+				height: 100%;
+				width: 0%;
+				background-color: #252627;
+				animation: typeName 2s linear;
+			}
+
+			&:hover::before {
+				width: 100%;
+			}
+			&:hover {
+				color: white;
+			}
+		}
+		.frontEndContainer {
+			width: 100%;
+			@include center;
+			position: relative;
+			gap: 1rem;
+			&::before {
+				content: '';
+				position: absolute;
+				width: 0%;
+				height: 100%;
+				background-color: #252627;
+				z-index: 1;
+				animation: frontEndAppear 1s ease-in-out 2.1s;
+			}
+
+			&:hover .frontEndDeveloper {
+				color: rgba(0, 0, 0, 0.6);
+			}
+
+			&:hover .middleBar::before {
+				width: 100%;
+			}
+			&:hover .middleBar {
+				opacity: 1;
+			}
+
+			.frontEndDeveloper {
+				// font-size: 53px;
+				font-size: clamp(12px, 3vw, 53px);
+				transition: 0.3s ease-in-out;
+				font-weight: 300;
+				text-transform: lowercase;
+				color: rgba(0, 0, 0, 0.45);
+				opacity: 0;
+				animation: opacityAppear 2.4s forwards 0.35s;
+			}
+
+			.middleBar {
+				width: 20%;
+				height: 1px;
+				background-color: rgba(112, 112, 112, 0.4);
+				transition: 0.2s ease-in-out;
+				position: relative;
+				opacity: 0;
+				animation: opacityAppear 2.4s forwards;
+
+				&::before {
+					content: '';
+					position: absolute;
+					background-color: #252627;
+					width: 0%;
+					opacity: 0;
+					height: 100%;
+					animation: opacityAppear 0.01s forwards 2.4s;
+					transition: 0.2s ease-in-out;
+				}
+				&:nth-of-type(1)::before {
+					right: 0;
+				}
+			}
+		}
+	}
+
+	.goDownContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: clamp(4px, 1vw, 4px);
+		position: absolute;
+		bottom: 100px;
+		cursor: pointer;
+		// background-color: greenyellow;
+		transform: rotate(45deg);
+		opacity: 0;
+		animation: fadeIn 0.2s forwards 3.3s;
+
+		&:hover .square {
+			background-color: black;
+		}
+
+		.square {
+			// width: 6px;
+			width: clamp(4px, 1vw, 8px);
+			height: clamp(4px, 1vw, 8px);
+			background-color: rgba(0, 0, 0, 0.23);
+			border: 1px solid #707070;
+			transition: 0.2s ease-in-out;
+		}
+
+		#sq3 {
+			animation: squareAnim 2s infinite 0.1s;
+		}
+		#sq4 {
+			animation: squareAnim 2s infinite 0.2s;
+		}
+		#sq5 {
+			animation: squareAnim 2s infinite 0.3s;
+		}
+		#sq1 {
+			animation: squareAnim 2s infinite 0.5s;
+		}
+		#sq2 {
+			animation: squareAnim 2s infinite 0.4s;
+		}
+
+		.bottomSquareRow {
+			display: flex;
+			gap: clamp(4px, 1vw, 4px);
+		}
+	}
+}

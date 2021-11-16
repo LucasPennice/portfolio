@@ -1,0 +1,165 @@
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500&family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+@mixin center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@import 'animations';
+
+@import 'welcomeScreen';
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	// font-family: 'Montserrat', sans-serif;
+	font-family: 'Gothic A1', sans-serif;
+	scroll-behavior: smooth;
+	-webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: rgba(37, 38, 39, 0.49); //49%
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: rgba(37, 38, 39, 0.77); //77%
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(37, 38, 39);
+}
+
+.mainPageDiv {
+	background-color: #f9f9f9;
+	height: 100vh;
+
+	.navBar {
+		font-weight: 200;
+		font-size: clamp(12px, 3vw, 32px);
+		padding-top: 40px;
+		@include center;
+		position: relative;
+
+		// .selectedDiv {
+		// 	width: 218px;
+		// 	height: 100px;
+		// 	background-color: transparent;
+		// 	border: 1px solid #707070;
+		// 	position: absolute;
+		// 	left: 35.3%;
+		// }
+
+		a {
+			padding: 0px clamp(15px, 3vw, 50px);
+			border-style: none solid none none;
+			border-color: rgba(112, 112, 112, 0.52);
+			border-width: 1px;
+			text-decoration: none;
+			color: #252627;
+
+			&:hover {
+				background-color: gray;
+			}
+		}
+		button {
+			padding: 0px clamp(15px, 3vw, 50px);
+			background-color: transparent;
+			border: none;
+			font-size: clamp(12px, 3vw, 32px);
+		}
+	}
+}
+
+.routeContainer {
+	height: calc(100vh - clamp(12px, 3vw, 32px) - 40px);
+	@include center;
+
+	.componentContainer {
+		background-color: #f9f9f9;
+		overflow-y: scroll;
+		height: 90%;
+		width: 95%;
+	}
+}
+
+.projectContainer {
+	display: flex;
+	height: 100%;
+	.projectText {
+		font-weight: 200;
+		// background-color: rgb(255, 255, 255);
+		width: 45%;
+		padding-top: 8rem;
+		padding-left: 4rem;
+
+		.projectTitle {
+			font-weight: 200;
+			font-size: 3.5rem;
+			text-transform: lowercase;
+			margin-bottom: 4rem;
+		}
+
+		.projectArrayContainer {
+			.projectParagraph {
+				text-transform: lowercase;
+				font-size: 2rem;
+				margin-bottom: 3rem;
+			}
+		}
+
+		.linksContainer {
+			font-size: 4rem;
+			display: flex;
+			gap: 3rem;
+		}
+	}
+
+	.projectImages {
+		width: 55%;
+		position: relative;
+
+		.swapButton {
+			position: absolute;
+			right: 12%;
+			bottom: 10%;
+			font-size: 3rem;
+			border: none;
+			background-color: transparent;
+			cursor: pointer;
+			transition: 0.2s;
+
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+
+		.desktopImages {
+			position: absolute;
+			right: 20%;
+			top: 50%;
+			width: calc(2560px / 4);
+			height: calc(1321px / 4);
+			background-color: white;
+			border: 1px solid #252627;
+			z-index: 2;
+		}
+		.mobileImages {
+			position: absolute;
+			right: 10%;
+			border: 1px solid #252627;
+			top: 10%;
+			width: calc(375px / 1.5);
+			height: calc(812px / 1.5);
+			background-color: white;
+		}
+	}
+}
