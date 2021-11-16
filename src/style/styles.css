@@ -649,7 +649,7 @@
 
 .routeContainer .componentContainer {
   background-color: #f9f9f9;
-  overflow-y: scroll;
+  overflow-y: hidden;
   height: 90%;
   width: 95%;
 }
@@ -678,7 +678,7 @@
 
 .projectContainer .projectText .projectArrayContainer .projectParagraph {
   text-transform: lowercase;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1rem, 2vw, 1.5rem);
   margin-bottom: clamp(1rem, 4vw, 3rem);
 }
 
@@ -687,11 +687,32 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: clamp(1rem, 4vw, 3rem);
+  gap: clamp(1rem, 4vw, 2rem);
+}
+
+.projectContainer .projectText .linksContainer .swapButton {
+  font-size: clamp(1rem, 4vw, 3rem);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.projectContainer .projectText .linksContainer .swapButton:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .projectContainer .projectText .linksContainer a {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   color: #252627;
+}
+
+.projectContainer .projectText .linksContainer a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .projectContainer .projectImages {
@@ -716,23 +737,6 @@
           transform: scale(1.05);
 }
 
-.projectContainer .projectImages .swapButton {
-  position: absolute;
-  right: 12%;
-  bottom: 10%;
-  font-size: clamp(1rem, 4vw, 3rem);
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-.projectContainer .projectImages .swapButton:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
 .projectContainer .projectImages .desktopImages {
   position: absolute;
   right: 20%;
@@ -741,16 +745,40 @@
   height: clamp(1.8rem, 25vw, 330px);
   background-color: white;
   border: 1px solid #252627;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
 .projectContainer .projectImages .mobileImages {
+  cursor: pointer;
   position: absolute;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   right: 10%;
   border: 1px solid #252627;
   top: 10%;
   width: clamp(1rem, 20vw, 250px);
   height: clamp(2.16rem, 43.2vw, 541px);
   background-color: white;
+}
+
+.inFront {
+  z-index: 3;
+}
+
+.behind {
+  z-index: 2;
+}
+
+.opacity0 {
+  opacity: 0;
+}
+
+.blur {
+  -webkit-filter: blur(5px);
+  /* Safari 6.0 - 9.0 */
+  filter: blur(5px);
 }
 
 @media (max-width: 700px) {
