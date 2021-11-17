@@ -1,4 +1,4 @@
-export default () => {
+export default ({ setPosition, isFirstRender, setIsFirstRender }) => {
 	return (
 		<div className="welcomeDiv">
 			<div className="welcomeScreenTextContainer">
@@ -9,7 +9,16 @@ export default () => {
 					<div id="bar2" className="middleBar"></div>
 				</div>
 			</div>
-			<a className="goDownContainer" href="#mainPage">
+			<a
+				className="goDownContainer"
+				href="#mainPage"
+				onClick={() => {
+					if (isFirstRender === true) {
+						setPosition(1);
+						setIsFirstRender(false);
+					}
+				}}
+			>
 				<div id="sq1" className="square"></div>
 				<div id="sq2" className="square"></div>
 				<div className="bottomSquareRow">

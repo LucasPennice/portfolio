@@ -1,5 +1,7 @@
+import React, { useState, useEffect } from 'react';
 import Project from './Project';
-export default () => {
+
+export default ({ position }) => {
 	const winestoreProject = {
 		title: 'winestore',
 		paragraphArray: [
@@ -48,16 +50,22 @@ export default () => {
 				project={showSearchProject}
 				prevProject=""
 				nextProject="weatherapp"
+				position={position}
+				projPosition={1}
 			/>
 			<Project
 				project={weatherAppProject}
 				prevProject="showsearch"
+				position={position}
 				nextProject="winestore"
+				projPosition={2}
 			/>
 			<Project
 				project={winestoreProject}
 				prevProject="weatherapp"
+				position={position}
 				nextProject=""
+				projPosition={3}
 			/>
 		</>
 	);

@@ -341,4 +341,22 @@
     opacity: 1;
   }
 }
+
+@-webkit-keyframes pullBack {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes pullBack {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
 /*# sourceMappingURL=animations.css.map */

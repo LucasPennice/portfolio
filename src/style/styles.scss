@@ -16,6 +16,7 @@
 	// font-family: 'Montserrat', sans-serif;
 	font-family: 'Gothic A1', sans-serif;
 	scroll-behavior: smooth;
+	overflow-y: hidden;
 	-webkit-tap-highlight-color: transparent;
 }
 
@@ -102,7 +103,18 @@
 		font-size: clamp(1rem, 4vw, 3.5rem);
 		text-transform: lowercase;
 		// margin-bottom: 4rem;
+		position: relative;
 		margin-bottom: clamp(1rem, 4vw, 4rem);
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100%;
+			width: 100%;
+			background-color: #252627;
+		}
 	}
 
 	.projectArrayContainer {
@@ -112,6 +124,17 @@
 			font-size: clamp(0.8rem, 2vw, 1.5rem);
 			// margin-bottom: 3rem;
 			margin-bottom: clamp(1rem, 4vw, 3rem);
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 100%;
+				width: 100%;
+				background-color: #252627;
+			}
 		}
 	}
 
@@ -155,9 +178,9 @@
 		// top: 50%;
 		top: clamp(40%, 10vw, 50%);
 		// width: calc(2560px / 4);
-		width: clamp(12.8rem, 41vw, 640px);
+		width: clamp(12.8rem, 37vw, 640px);
 		// height: calc(1321px / 4);
-		height: clamp(7.2rem, 20vw, 330px);
+		height: clamp(7.2rem, 16vw, 330px);
 		background-color: white;
 		border: 1px solid #252627;
 		transition: 0.2s;
@@ -195,7 +218,24 @@
 	filter: blur(5px);
 }
 
+.animateProject {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 0%;
+		background-color: #252627;
+		animation: pullBack 1s forwards;
+	}
+}
+
 @media (max-width: 660px) {
+	* {
+		overflow-y: visible;
+	}
 	.projectContainer {
 		flex-direction: column;
 

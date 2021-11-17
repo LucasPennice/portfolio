@@ -342,6 +342,24 @@
   }
 }
 
+@-webkit-keyframes pullBack {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes pullBack {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
 .welcomeDiv {
   height: 100vh;
   display: -webkit-box;
@@ -571,6 +589,7 @@
           box-sizing: border-box;
   font-family: 'Gothic A1', sans-serif;
   scroll-behavior: smooth;
+  overflow-y: hidden;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -673,13 +692,35 @@
   font-weight: 200;
   font-size: clamp(1rem, 4vw, 3.5rem);
   text-transform: lowercase;
+  position: relative;
   margin-bottom: clamp(1rem, 4vw, 4rem);
+}
+
+.projectContainer .projectTitle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #252627;
 }
 
 .projectContainer .projectArrayContainer .projectParagraph {
   text-transform: lowercase;
   font-size: clamp(0.8rem, 2vw, 1.5rem);
   margin-bottom: clamp(1rem, 4vw, 3rem);
+  position: relative;
+}
+
+.projectContainer .projectArrayContainer .projectParagraph::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #252627;
 }
 
 .projectContainer .linksContainer {
@@ -724,8 +765,8 @@
   position: absolute;
   right: clamp(10%, 10vw, 20%);
   top: clamp(40%, 10vw, 50%);
-  width: clamp(12.8rem, 41vw, 640px);
-  height: clamp(7.2rem, 20vw, 330px);
+  width: clamp(12.8rem, 37vw, 640px);
+  height: clamp(7.2rem, 16vw, 330px);
   background-color: white;
   border: 1px solid #252627;
   -webkit-transition: 0.2s;
@@ -764,7 +805,26 @@
   filter: blur(5px);
 }
 
+.animateProject {
+  position: relative;
+}
+
+.animateProject::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #252627;
+  -webkit-animation: pullBack 1s forwards;
+          animation: pullBack 1s forwards;
+}
+
 @media (max-width: 660px) {
+  * {
+    overflow-y: visible;
+  }
   .projectContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

@@ -3,12 +3,20 @@ import { useState, useEffect } from 'react';
 import { AiFillGithub, AiOutlineDeploymentUnit } from 'react-icons/ai';
 import { CgArrowUpR, CgArrowDownR } from 'react-icons/cg';
 
-export default ({ project, prevProject, nextProject }) => {
+export default ({
+	project,
+	prevProject,
+	nextProject,
+	position,
+	projPosition,
+}) => {
 	const { title, paragraphArray, github, live, d1, d2, m1, m2 } = project;
 	const [mobileImg, setMobileImg] = useState(m1);
 	const [mobileClass, setMobileClass] = useState('mobileImages behind');
 	const [mobileOpacity, setMobileOpacity] = useState(1);
 	const [desktopImg, setDesktopImg] = useState(d1);
+	const [titleClass, setTitleClass] = useState('projectTitle');
+	const [paragraphClass, setParagraphClass] = useState('projectParagraph');
 	const [desktopClass, setDesktopClass] = useState('desktopImages inFront');
 	const [desktopOpacity, setDesktopOpacity] = useState(1);
 
@@ -21,8 +29,10 @@ export default ({ project, prevProject, nextProject }) => {
 	}, []);
 
 	const printArrays = () => {
+		let delay = 0;
 		return paragraphArray.map((text) => {
-			return <p key={text} className="projectParagraph">{`< ${text} />`}</p>;
+			delay += 0.1;
+			return <p key={text} className={paragraphClass}>{`< ${text} />`}</p>;
 		});
 	};
 	const changeImage = (currentImg, ImageChanger, screen) => {
@@ -80,12 +90,34 @@ export default ({ project, prevProject, nextProject }) => {
 		}
 	};
 
+	useEffect(() => {
+		let id = null;
+		let id2 = null;
+
+		if (position === projPosition) {
+			setParagraphClass('projectParagraph animateProject');
+			id2 = setTimeout(() => {
+				setTitleClass('projectTitle animateProject');
+			}, 100);
+		}
+		if (position !== projPosition) {
+			id = setTimeout(() => {
+				setParagraphClass('projectParagraph');
+				setTitleClass('projectTitle');
+			}, 200);
+		}
+		return () => {
+			clearTimeout(id);
+			clearTimeout(id2);
+		};
+	}, [position]);
+
 	return (
 		<>
 			{
 				<div className="projectContainer" key={title} id={title}>
 					<div className="projectText">
-						<h1 className="projectTitle">{title}</h1>
+						<h1 className={titleClass}>{title}</h1>
 						<div className="projectArrayContainer">{printArrays()}</div>
 						<div className="linksContainer">
 							<a href={github} target="_blank">
@@ -105,7 +137,7 @@ export default ({ project, prevProject, nextProject }) => {
 								</a>
 							)}
 							{nextProject === '' ? (
-								<div></div>
+								<></>
 							) : (
 								<a href={`#${nextProject}`}>
 									<CgArrowDownR />
