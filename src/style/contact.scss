@@ -5,6 +5,24 @@
 	justify-content: center;
 	align-items: center;
 
+	.myInfo {
+		animation: fadeInOpacity 0.2s forwards;
+
+		margin-bottom: 1rem;
+
+		div {
+			font-size: clamp(1rem, 4vw, 1.2rem);
+			margin-bottom: 1rem;
+			font-weight: 200;
+
+			span {
+				margin-right: 1rem;
+				color: $darkColor77;
+				font-size: clamp(0.6rem, 4vw, 0.8rem);
+			}
+		}
+	}
+
 	.iconsContact {
 		font-size: clamp(2rem, 4vw, 4rem);
 		display: flex;
@@ -12,6 +30,7 @@
 		gap: clamp(1rem, 4vw, 3rem);
 		opacity: 0;
 		animation: fadeInOpacity 0.2s forwards 0.1s;
+		overflow-y: hidden;
 		overflow-x: hidden;
 		div {
 			display: flex;
@@ -19,6 +38,7 @@
 			align-items: center;
 			transition: 0.2s;
 			justify-content: center;
+			overflow-y: hidden;
 			position: relative;
 			overflow-x: hidden;
 			width: 10vw;
@@ -34,7 +54,7 @@
 			#linkedin,
 			#github,
 			#resume,
-			#mail {
+			#whatsapp {
 				transition: 0.2s;
 				color: $darkColor100;
 			}
@@ -48,8 +68,8 @@
 			#resume:hover {
 				color: #ffc800;
 			}
-			#mail:hover {
-				color: #a30b37;
+			#whatsapp:hover {
+				color: #3ab84b;
 			}
 			span {
 				display: block;
@@ -64,7 +84,7 @@
 	}
 
 	form {
-		width: clamp(300px, 50vw, 1000px);
+		width: clamp(300px, 50vw, 800px);
 		display: flex;
 		flex-direction: column;
 		opacity: 0;

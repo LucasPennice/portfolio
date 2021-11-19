@@ -1,16 +1,24 @@
-import { CgSwap } from 'react-icons/cg';
 import { useState, useEffect } from 'react';
+import { AiFillHtml5 } from 'react-icons/ai';
+import {
+	SiJavascript,
+	SiSass,
+	SiReact,
+	SiReactrouter,
+	SiRedux,
+} from 'react-icons/si';
 import { AiFillGithub, AiOutlineDeploymentUnit } from 'react-icons/ai';
 import { CgArrowUpR, CgArrowDownR } from 'react-icons/cg';
-
 export default ({
 	project,
 	prevProject,
 	nextProject,
 	position,
 	projPosition,
+	children,
 }) => {
-	const { title, paragraphArray, github, live, d1, d2, m1, m2 } = project;
+	const { title, paragraphArray, github, live, d1, d2, m1, m2, techUsed } =
+		project;
 	const [mobileImg, setMobileImg] = useState(m1);
 	const [mobileClass, setMobileClass] = useState('mobileImages behind');
 	const [mobileOpacity, setMobileOpacity] = useState(1);
@@ -68,25 +76,27 @@ export default ({
 		}
 	};
 
-	const changeIndex = () => {
-		if (desktopClass.includes('inFront')) {
-			setDesktopOpacity(0);
-			setTimeout(() => {
-				setMobileClass('mobileImages inFront');
-				setDesktopClass('desktopImages behind');
-			}, 200);
-			setTimeout(() => {
-				setDesktopOpacity(1);
-			}, 300);
-		} else {
-			setMobileOpacity(0);
-			setTimeout(() => {
-				setMobileClass('mobileImages behind');
-				setDesktopClass('desktopImages inFront');
-			}, 200);
-			setTimeout(() => {
-				setMobileOpacity(1);
-			}, 300);
+	const changeIndex = (clickedClass) => {
+		if (!clickedClass.includes('inFront')) {
+			if (desktopClass.includes('inFront')) {
+				setDesktopOpacity(0);
+				setTimeout(() => {
+					setMobileClass('mobileImages inFront');
+					setDesktopClass('desktopImages behind');
+				}, 200);
+				setTimeout(() => {
+					setDesktopOpacity(1);
+				}, 300);
+			} else {
+				setMobileOpacity(0);
+				setTimeout(() => {
+					setMobileClass('mobileImages behind');
+					setDesktopClass('desktopImages inFront');
+				}, 200);
+				setTimeout(() => {
+					setMobileOpacity(1);
+				}, 300);
+			}
 		}
 	};
 
@@ -118,6 +128,7 @@ export default ({
 				<div className="projectContainer" key={title} id={title}>
 					<div className="projectText">
 						<h1 className={titleClass}>{title}</h1>
+						{children}
 						<div className="projectArrayContainer">{printArrays()}</div>
 						<div className="linksContainer">
 							<a href={github} target="_blank">
@@ -126,9 +137,6 @@ export default ({
 							<a href={live} target="_blank">
 								<AiOutlineDeploymentUnit />
 							</a>
-							<button className="swapButton" onClick={() => changeIndex()}>
-								<CgSwap />
-							</button>
 							{prevProject === '' ? (
 								<></>
 							) : (
@@ -147,13 +155,19 @@ export default ({
 					</div>
 					<div className="projectImages">
 						<img
-							onClick={() => changeImage(desktopImg, setDesktopImg, 'desktop')}
+							onClick={() => {
+								changeImage(desktopImg, setDesktopImg, 'desktop');
+								changeIndex(desktopClass);
+							}}
 							className={desktopClass}
 							src={desktopImg}
 							style={{ opacity: desktopOpacity }}
 						/>
 						<img
-							onClick={() => changeImage(mobileImg, setMobileImg, 'mobile')}
+							onClick={() => {
+								changeImage(mobileImg, setMobileImg, 'mobile');
+								changeIndex(mobileClass);
+							}}
 							className={mobileClass}
 							src={mobileImg}
 							style={{ opacity: mobileOpacity }}

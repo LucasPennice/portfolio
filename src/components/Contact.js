@@ -2,36 +2,53 @@ import {
 	AiFillLinkedin,
 	AiFillGithub,
 	AiTwotoneFolderOpen,
-	AiOutlineMail,
+	AiOutlineWhatsApp,
 } from 'react-icons/ai';
 
 export default () => {
 	return (
 		<div className="contactDiv">
+			<div className="myInfo">
+				<div>
+					<span>{`<name/>`}</span>Lucas Pennice
+				</div>
+				<div>
+					<span>{`<phone/>`}</span>+5493413584946
+				</div>
+				<div>
+					<span>{`<location/>`}</span>Rosario, Santa Fe, Argentina
+				</div>
+				<div>
+					<span>{`<email/>`}</span>lucaspennice@gmail.com
+				</div>
+			</div>
 			<div className="iconsContact">
 				<div>
-					<a href="http://www.linkedin.com/in/lucas-pennice">
+					<a href="http://www.linkedin.com/in/lucas-pennice" target="_blank">
 						<AiFillLinkedin id="linkedin" />
 					</a>
 					<span>LinkedIn</span>
 				</div>
 				<div>
-					<a href="https://github.com/LucasPennice">
+					<a href="https://github.com/LucasPennice" target="_blank">
 						<AiFillGithub id="github" />
 					</a>
 					<span>GitHub</span>
 				</div>
 				<div>
-					<a href="https://docs.google.com/document/d/e/2PACX-1vRu_S7LLF2c33QBm_Aw21__6pLKNl9GLv95IwgdpNcO2zIdTT6mGAzxz3QESO1w3cagji3VDmqRet7y/pub">
+					<a
+						href="https://docs.google.com/document/d/e/2PACX-1vRu_S7LLF2c33QBm_Aw21__6pLKNl9GLv95IwgdpNcO2zIdTT6mGAzxz3QESO1w3cagji3VDmqRet7y/pub"
+						target="_blank"
+					>
 						<AiTwotoneFolderOpen id="resume" />
 					</a>
-					<span>Resume</span>
+					<span>CV</span>
 				</div>
 				<div>
-					<a>
-						<AiOutlineMail id="mail" />
+					<a href="https://wa.me/5493413584946" target="_blank">
+						<AiOutlineWhatsApp id="whatsapp" />
 					</a>
-					<span>lucaspennice@gmail.com</span>
+					<span>WhatsApp</span>
 				</div>
 			</div>
 			<form

@@ -6,7 +6,6 @@
           box-sizing: border-box;
   font-family: 'Gothic A1', sans-serif;
   scroll-behavior: smooth;
-  overflow-y: hidden;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -820,9 +819,112 @@
   margin-bottom: clamp(1rem, 4vw, 4rem);
 }
 
+.projectContainer .techUsed {
+  font-weight: 200;
+  text-transform: lowercase;
+  font-size: clamp(2rem, 2vw, 1.5rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: clamp(1rem, 4vw, 2rem);
+  height: calc(clamp(2rem, 6vw, 5rem) + 3rem);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  opacity: 0;
+  -webkit-animation: fadeInOpacity 0.4s forwards 0.8s;
+          animation: fadeInOpacity 0.4s forwards 0.8s;
+}
+
+.projectContainer .techUsed div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projectContainer .techUsed div > :first-child {
+  color: #f9f9f9;
+  background-color: #252627;
+  font-size: clamp(2rem, 6vw, 3rem);
+  padding: 0.5rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.projectContainer .techUsed div > :first-child:hover + span {
+  opacity: 1;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.projectContainer .techUsed div #reactLogo:hover {
+  color: #61dbfb;
+}
+
+.projectContainer .techUsed div #reduxLogo:hover {
+  color: #764abd;
+}
+
+.projectContainer .techUsed div #routerLogo:hover {
+  color: #ca4245;
+}
+
+.projectContainer .techUsed div #jsLogo:hover {
+  color: #ead41c;
+}
+
+.projectContainer .techUsed div #htmlLogo:hover {
+  color: #d84923;
+}
+
+.projectContainer .techUsed div #sassLogo:hover {
+  color: #ca689b;
+}
+
+.projectContainer .techUsed div #postmanLogo:hover {
+  color: #e7663a;
+}
+
+.projectContainer .techUsed div #xdLogo:hover {
+  color: #f229b8;
+}
+
+.projectContainer .techUsed div #vscodeLogo:hover {
+  color: #379fe7;
+}
+
+.projectContainer .techUsed div #gitLogo:hover {
+  color: #e44b2f;
+}
+
+.projectContainer .techUsed span {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  bottom: 0px;
+  font-weight: 200;
+  cursor: default;
+}
+
 .projectContainer .projectArrayContainer {
   overflow-y: scroll;
-  height: 60%;
   margin-bottom: clamp(1rem, 4vw, 3rem);
   padding-right: clamp(0.1rem, 4vw, 1rem);
 }
@@ -895,8 +997,8 @@
   right: 10%;
   border: 1px solid #252627;
   top: 10%;
-  width: clamp(6rem, 16vw, 250px);
-  height: clamp(15.28rem, 39.2vw, 541px);
+  width: clamp(5rem, 16vw, 250px);
+  height: clamp(14.28rem, 39.2vw, 541px);
   background-color: #6e7e85;
 }
 
@@ -941,15 +1043,18 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    gap: 0rem;
     margin-right: 0.2rem;
   }
   .projectContainer .projectText {
     width: 100%;
+    height: 65%;
   }
   .projectContainer .swapButton {
     display: none;
   }
   .projectContainer .projectImages {
+    height: 35%;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1222,6 +1327,24 @@
           align-items: center;
 }
 
+.contactDiv .myInfo {
+  -webkit-animation: fadeInOpacity 0.2s forwards;
+          animation: fadeInOpacity 0.2s forwards;
+  margin-bottom: 1rem;
+}
+
+.contactDiv .myInfo div {
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  margin-bottom: 1rem;
+  font-weight: 200;
+}
+
+.contactDiv .myInfo div span {
+  margin-right: 1rem;
+  color: rgba(37, 38, 39, 0.77);
+  font-size: clamp(0.6rem, 4vw, 0.8rem);
+}
+
 .contactDiv .iconsContact {
   font-size: clamp(2rem, 4vw, 4rem);
   display: -webkit-box;
@@ -1232,6 +1355,7 @@
   opacity: 0;
   -webkit-animation: fadeInOpacity 0.2s forwards 0.1s;
           animation: fadeInOpacity 0.2s forwards 0.1s;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -1251,6 +1375,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow-y: hidden;
   position: relative;
   overflow-x: hidden;
   width: 10vw;
@@ -1270,7 +1395,7 @@
 .contactDiv .iconsContact div #linkedin,
 .contactDiv .iconsContact div #github,
 .contactDiv .iconsContact div #resume,
-.contactDiv .iconsContact div #mail {
+.contactDiv .iconsContact div #whatsapp {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   color: #252627;
@@ -1288,8 +1413,8 @@
   color: #ffc800;
 }
 
-.contactDiv .iconsContact div #mail:hover {
-  color: #a30b37;
+.contactDiv .iconsContact div #whatsapp:hover {
+  color: #3ab84b;
 }
 
 .contactDiv .iconsContact div span {
@@ -1305,7 +1430,7 @@
 }
 
 .contactDiv form {
-  width: clamp(300px, 50vw, 1000px);
+  width: clamp(300px, 50vw, 800px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
