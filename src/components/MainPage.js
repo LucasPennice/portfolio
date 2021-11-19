@@ -5,7 +5,7 @@ import NavBar from './NavBar';
 import Contact from './Contact';
 import { useState } from 'react';
 
-export default ({ position, setPosition }) => {
+export default ({ position, setPosition, switchTheme }) => {
 	const inWhatProject = (cTopPos, ProjectHeight) => {
 		const cBotPos = cTopPos + ProjectHeight;
 		setPosition(Math.round((cBotPos - 10) / ProjectHeight));
@@ -14,7 +14,7 @@ export default ({ position, setPosition }) => {
 	return (
 		<div className="mainPageDiv" id="mainPage">
 			<Router>
-				<NavBar />
+				<NavBar switchTheme={switchTheme} />
 				<div className="routeContainer">
 					<div
 						className="componentContainer"

@@ -359,4 +359,40 @@
     width: 0%;
   }
 }
+
+@-webkit-keyframes fadeInOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes pullfront {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes pullfront {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=animations.css.map */

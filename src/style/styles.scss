@@ -5,9 +5,17 @@
 	justify-content: center;
 	align-items: center;
 }
-@import 'animations';
 
-@import 'welcomeScreen';
+$backgroundColor: rgb(249, 249, 249);
+$lightColor: rgb(110, 126, 133);
+$lightColor40: rgba(110, 126, 133, 0.4);
+$darkColor100: rgb(37, 38, 39);
+$darkColor49: rgba(37, 38, 39, 0.49);
+$darkColor77: rgba(37, 38, 39, 0.77);
+$darkColor83: rgba(37, 38, 39, 0.83);
+$darkColor15: rgba(37, 38, 39, 0.15);
+$darkColor20: rgba(37, 38, 39, 0.2);
+$transparent: rgba(37, 38, 39, 0);
 
 * {
 	padding: 0;
@@ -21,26 +29,39 @@
 }
 
 ::-webkit-scrollbar {
-	width: 12px;
+	width: 7px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-	background: rgba(37, 38, 39, 0.49); //49%
+	// background: rgba(37, 38, 39, 0); //49%
+	background: $transparent; //49%
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: rgba(37, 38, 39, 0.77); //77%
+	// background: rgba(37, 38, 39, 0.47);
+	background: $darkColor49;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: rgb(37, 38, 39);
+	// background: rgb(37, 38, 39);
+	background: $darkColor100;
 }
 
+@import 'animations';
+@import 'welcomeScreen';
+@import 'portfolio';
+@import 'about';
+@import 'contact';
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 .mainPageDiv {
-	background-color: #f9f9f9;
+	background-color: $backgroundColor;
 	height: 100vh;
 
 	.navBar {
@@ -49,17 +70,23 @@
 		padding-top: 40px;
 		@include center;
 		position: relative;
+		padding-bottom: 0.2rem;
 
 		a {
 			padding: 0px clamp(15px, 3vw, 50px);
 			border-style: none solid none none;
-			border-color: rgba(112, 112, 112, 0.52);
+			// border-color: rgba(112, 112, 112, 0.52);
+			border-color: $lightColor40;
 			border-width: 1px;
 			text-decoration: none;
-			color: #252627;
+			color: $darkColor100;
+			outline: 1px solid $transparent;
+			outline-offset: -20px;
+			transition: 0.2s;
 
 			&:hover {
-				background-color: gray;
+				outline: 1px solid $darkColor100;
+				outline-offset: 0px;
 			}
 		}
 		button {
@@ -76,128 +103,10 @@
 	@include center;
 
 	.componentContainer {
-		background-color: #f9f9f9;
-		overflow-y: hidden;
+		background-color: $backgroundColor;
+		overflow-y: scroll;
 		height: 90%;
 		width: 95%;
-	}
-}
-
-.projectContainer {
-	display: flex;
-	height: 100%;
-	gap: 3rem;
-
-	.projectText {
-		font-weight: 200;
-		// background-color: rgb(255, 255, 255);
-		width: 45%;
-		// padding-top: 8rem;
-		padding-top: clamp(1rem, 4vw, 8rem);
-		// padding-left: 4rem;
-		padding-left: clamp(1rem, 4vw, 4rem);
-	}
-	.projectTitle {
-		font-weight: 200;
-		// font-size: 3.5rem;
-		font-size: clamp(1rem, 4vw, 3.5rem);
-		text-transform: lowercase;
-		// margin-bottom: 4rem;
-		position: relative;
-		margin-bottom: clamp(1rem, 4vw, 4rem);
-
-		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 0;
-			height: 100%;
-			width: 100%;
-			background-color: #252627;
-		}
-	}
-
-	.projectArrayContainer {
-		.projectParagraph {
-			text-transform: lowercase;
-			// font-size: 2rem;
-			font-size: clamp(0.8rem, 2vw, 1.5rem);
-			// margin-bottom: 3rem;
-			margin-bottom: clamp(1rem, 4vw, 3rem);
-			position: relative;
-
-			&::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				right: 0;
-				height: 100%;
-				width: 100%;
-				background-color: #252627;
-			}
-		}
-	}
-
-	.linksContainer {
-		// font-size: 4rem;
-		font-size: clamp(1.5rem, 4vw, 4rem);
-		display: flex;
-		// gap: 3rem;
-		gap: clamp(1rem, 4vw, 2rem);
-
-		.swapButton {
-			// font-size: 3rem;
-			font-size: clamp(1rem, 4vw, 3rem);
-			border: none;
-			background-color: transparent;
-			cursor: pointer;
-			transition: 0.2s;
-
-			&:hover {
-				transform: scale(1.05);
-			}
-		}
-		a {
-			transition: 0.2s;
-			color: #252627;
-			&:hover {
-				transform: scale(1.05);
-			}
-		}
-	}
-}
-
-.projectImages {
-	width: 55%;
-	position: relative;
-
-	.desktopImages {
-		position: absolute;
-		// right: 20%;
-		right: clamp(10%, 10vw, 20%);
-		// top: 50%;
-		top: clamp(40%, 10vw, 50%);
-		// width: calc(2560px / 4);
-		width: clamp(12.8rem, 37vw, 640px);
-		// height: calc(1321px / 4);
-		height: clamp(7.2rem, 16vw, 330px);
-		background-color: white;
-		border: 1px solid #252627;
-		transition: 0.2s;
-		cursor: pointer;
-	}
-	.mobileImages {
-		cursor: pointer;
-		position: absolute;
-		transition: 0.2s;
-		right: 10%;
-		border: 1px solid #252627;
-		top: 10%;
-		// width: calc(375px / 1.5);
-		width: clamp(6rem, 16vw, 250px); //1
-		// height: calc(812px / 1.5);
-		height: clamp(15.28rem, 39.2vw, 541px); //2.16
-		background-color: white;
 	}
 }
 
@@ -216,44 +125,4 @@
 .blur {
 	-webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
 	filter: blur(5px);
-}
-
-.animateProject {
-	position: relative;
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 100%;
-		width: 0%;
-		background-color: #252627;
-		animation: pullBack 1s forwards;
-	}
-}
-
-@media (max-width: 660px) {
-	* {
-		overflow-y: visible;
-	}
-	.projectContainer {
-		flex-direction: column;
-
-		.projectText {
-			width: 100%;
-		}
-
-		.projectImages {
-			width: 100%;
-
-			.desktopImages {
-				right: 100px;
-				top: 50px;
-			}
-			.mobileImages {
-				right: 10%;
-				top: -80px;
-			}
-		}
-	}
 }

@@ -179,3 +179,75 @@
 		width: 0%;
 	}
 }
+
+@keyframes fadeInOpacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes pullfront {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes cogVroom {
+	from {
+		transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(-50deg);
+	}
+	15% {
+		transform: rotate(-50deg);
+		filter: blur(0px);
+		color: $darkColor100;
+	}
+	20% {
+		filter: blur(2px);
+	}
+	to {
+		color: #a30b37;
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes lampLight {
+	from {
+		transform: scale(1) translateY(0px);
+		filter: blur(0px);
+	}
+	50% {
+		color: $darkColor100;
+		filter: blur(2px);
+		transform: scale(0.95) translateY(10px);
+	}
+	to {
+		filter: blur(0px);
+		transform: scale(1) translateY(-7px);
+		color: #ffc800;
+	}
+}
+
+@keyframes codeClick {
+	from {
+		filter: blur(0px);
+		transform: scale(1);
+	}
+	40% {
+		color: $darkColor100;
+		transform: scale(0.8);
+		filter: blur(2px);
+	}
+	to {
+		filter: blur(0px);
+		transform: scale(1);
+		color: #4062bb;
+	}
+}

@@ -1,6 +1,6 @@
 export default ({ setPosition, isFirstRender, setIsFirstRender }) => {
 	return (
-		<div className="welcomeDiv">
+		<div className="welcomeDiv" id="home">
 			<div className="welcomeScreenTextContainer">
 				<div className="lucasPennice">LUCAS PENNICE</div>
 				<div className="frontEndContainer">

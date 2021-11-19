@@ -101,10 +101,10 @@ export default ({
 			}, 100);
 		}
 		if (position !== projPosition) {
+			setTitleClass('projectTitle goingAway');
 			id = setTimeout(() => {
-				setParagraphClass('projectParagraph');
-				setTitleClass('projectTitle');
-			}, 200);
+				setParagraphClass('projectParagraph goingAway');
+			}, 100);
 		}
 		return () => {
 			clearTimeout(id);

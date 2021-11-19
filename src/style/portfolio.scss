@@ -1,0 +1,172 @@
+.projectContainer {
+	display: flex;
+	height: 100%;
+	gap: 3rem;
+	opacity: 0;
+	animation: fadeInOpacity 0.2s forwards 0.1s;
+
+	.projectText {
+		font-weight: 200;
+		// background-color: rgb(255, 255, 255);
+		width: 45%;
+		// padding-top: 8rem;
+		padding-top: clamp(1rem, 4vw, 8rem);
+		// padding-left: 4rem;
+		padding-left: clamp(1rem, 4vw, 4rem);
+	}
+	.projectTitle {
+		font-weight: 200;
+		// font-size: 3.5rem;
+		font-size: clamp(1.7rem, 4vw, 3.5rem);
+		text-transform: lowercase;
+		// margin-bottom: 4rem;
+		margin-bottom: clamp(1rem, 4vw, 4rem);
+	}
+
+	.projectArrayContainer {
+		overflow-y: scroll;
+		height: 60%;
+		margin-bottom: clamp(1rem, 4vw, 3rem);
+		padding-right: clamp(0.1rem, 4vw, 1rem);
+		.projectParagraph {
+			text-transform: lowercase;
+			// font-size: 2rem;
+			font-size: clamp(1rem, 1.5vw, 1.5rem);
+			// margin-bottom: 3rem;
+			&:not(:last-of-type) {
+				margin-bottom: clamp(1rem, 4vw, 3rem);
+			}
+			// position: relative;
+
+			// &::before {
+			// 	content: '';
+			// 	position: absolute;
+			// 	top: 0;
+			// 	right: 0;
+			// 	height: 100%;
+			// 	width: 100%;
+			// 	background-color: $darkColor100;
+			// }
+		}
+	}
+
+	.linksContainer {
+		// font-size: 4rem;
+		font-size: clamp(1.5rem, 4vw, 4rem);
+		display: flex;
+		// gap: 3rem;
+		gap: clamp(1rem, 4vw, 2rem);
+
+		.swapButton {
+			// font-size: 3rem;
+			font-size: clamp(1.5rem, 4vw, 4rem);
+			border: none;
+			background-color: transparent;
+			cursor: pointer;
+			transition: 0.2s;
+
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+		a {
+			transition: 0.2s;
+			color: $darkColor100;
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+	}
+}
+
+.projectImages {
+	width: 55%;
+	position: relative;
+
+	.desktopImages {
+		position: absolute;
+		// right: 20%;
+		right: clamp(10%, 10vw, 20%);
+		// top: 50%;
+		top: clamp(40%, 10vw, 50%);
+		// width: calc(2560px / 4);
+		width: clamp(12.8rem, 37vw, 640px);
+		// height: calc(1321px / 4);
+		height: clamp(7.2rem, 16vw, 330px);
+		background-color: $lightColor;
+		border: 1px solid $darkColor100;
+		transition: 0.2s;
+		cursor: pointer;
+	}
+	.mobileImages {
+		cursor: pointer;
+		position: absolute;
+		transition: 0.2s;
+		right: 10%;
+		border: 1px solid $darkColor100;
+		top: 10%;
+		// width: calc(375px / 1.5);
+		width: clamp(6rem, 16vw, 250px); //1
+		// height: calc(812px / 1.5);
+		height: clamp(15.28rem, 39.2vw, 541px); //2.16
+		background-color: $lightColor;
+	}
+}
+
+.animateProject {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 0%;
+		background-color: $darkColor100;
+		animation: pullBack 1s;
+	}
+}
+.goingAway {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		background-color: $darkColor100;
+		animation: pullfront 1s;
+	}
+}
+
+@media (max-width: 660px) {
+	// * {
+	// 	// overflow-y: visible;
+	// }
+	.projectContainer {
+		flex-direction: column;
+		justify-content: center;
+		margin-right: 0.2rem;
+		.projectText {
+			width: 100%;
+		}
+		.swapButton {
+			display: none;
+		}
+
+		.projectImages {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.desktopImages {
+				position: static;
+			}
+			.mobileImages {
+				position: static;
+			}
+		}
+	}
+}

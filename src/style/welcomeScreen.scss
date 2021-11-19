@@ -1,7 +1,7 @@
 .welcomeDiv {
 	height: 100vh;
 	@include center;
-	background-color: #f9f9f9;
+	background-color: $backgroundColor;
 	flex-direction: column;
 	position: relative;
 
@@ -14,7 +14,7 @@
 		flex-direction: column;
 
 		.lucasPennice {
-			color: rgba(37, 38, 39, 0.83); //PonerOpacity 83%
+			color: $darkColor83; //PonerOpacity 83%
 			opacity: 0.92;
 			font-weight: 200;
 			text-transform: uppercase;
@@ -25,7 +25,7 @@
 			letter-spacing: clamp(10px, 3vw, 25px);
 			text-indent: clamp(10px, 3vw, 25px);
 			transition: 0.2s ease-in-out;
-			text-shadow: 0px 12px 8px rgba(110, 126, 133, 0.2); //15%
+			text-shadow: 0px 12px 8px $darkColor20; //20%
 			animation: colorLock 2s;
 			&:before {
 				content: '';
@@ -35,7 +35,7 @@
 				right: 0;
 				height: 100%;
 				width: 0%;
-				background-color: #252627;
+				background-color: $darkColor100;
 				animation: typeName 2s linear;
 			}
 
@@ -43,7 +43,7 @@
 				width: 100%;
 			}
 			&:hover {
-				color: white;
+				color: $backgroundColor;
 			}
 		}
 		.frontEndContainer {
@@ -56,13 +56,13 @@
 				position: absolute;
 				width: 0%;
 				height: 100%;
-				background-color: #252627;
+				background-color: $darkColor100;
 				z-index: 1;
 				animation: frontEndAppear 1s ease-in-out 2.1s;
 			}
 
 			&:hover .frontEndDeveloper {
-				color: rgba(0, 0, 0, 0.6);
+				color: $darkColor100;
 			}
 
 			&:hover .middleBar::before {
@@ -86,7 +86,7 @@
 			.middleBar {
 				width: 20%;
 				height: 1px;
-				background-color: rgba(112, 112, 112, 0.4);
+				background-color: $lightColor40;
 				transition: 0.2s ease-in-out;
 				position: relative;
 				opacity: 0;
@@ -95,7 +95,7 @@
 				&::before {
 					content: '';
 					position: absolute;
-					background-color: #252627;
+					background-color: $darkColor100;
 					width: 0%;
 					opacity: 0;
 					height: 100%;
@@ -131,7 +131,7 @@
 			width: clamp(4px, 1vw, 8px);
 			height: clamp(4px, 1vw, 8px);
 			background-color: rgba(0, 0, 0, 0.23);
-			border: 1px solid #707070;
+			border: 1px solid $lightColor;
 			transition: 0.2s ease-in-out;
 		}
 
