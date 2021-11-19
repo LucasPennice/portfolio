@@ -1319,9 +1319,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1350,7 +1347,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: clamp(1rem, 4vw, 3rem);
   gap: clamp(1rem, 4vw, 3rem);
   opacity: 0;
   -webkit-animation: fadeInOpacity 0.2s forwards 0.1s;
@@ -1452,7 +1448,6 @@
   background-color: #f9f9f9;
   border-style: none none solid none;
   border-color: rgba(37, 38, 39, 0.2);
-  margin-bottom: clamp(1rem, 4vw, 3rem);
   height: clamp(1.7rem, 4vw, 3rem);
   font-size: clamp(1.7rem, 4vw, 1rem);
   -webkit-transition: 0.2s;
