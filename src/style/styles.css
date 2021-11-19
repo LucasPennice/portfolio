@@ -1171,6 +1171,8 @@
           align-items: flex-start;
   position: relative;
   opacity: 0;
+  width: 100%;
+  overflow-x: scroll;
   -webkit-animation: fadeInOpacity 0.4s forwards 0.8s;
           animation: fadeInOpacity 0.4s forwards 0.8s;
 }
