@@ -220,18 +220,20 @@
 	.projectContainer {
 		flex-direction: column;
 		justify-content: center;
+		height: fit-content;
 		gap: 0rem;
 		margin-right: 0.2rem;
+		// margin-bottom: 10rem;
 		.projectText {
 			width: 100%;
-			height: 65%;
+			// height: 65%;
 		}
 		.swapButton {
 			display: none;
 		}
 
 		.projectImages {
-			height: 35%;
+			// height: 35%;
 			width: 100%;
 			display: flex;
 			justify-content: center;
