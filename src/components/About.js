@@ -8,8 +8,10 @@ import {
 	SiReactrouter,
 	SiRedux,
 	SiPostman,
+	SiTailwindcss,
 	SiAdobexd,
 } from 'react-icons/si';
+import { BsFillBootstrapFill } from 'react-icons/bs';
 import { BiGitBranch } from 'react-icons/bi';
 
 export default () => {
@@ -61,6 +63,14 @@ export default () => {
 				<div>
 					<SiSass id="sassLogo" />
 					<span>SASS</span>
+				</div>
+				<div>
+					<BsFillBootstrapFill id="bootstrapLogo" />
+					<span>Bootstrap</span>
+				</div>
+				<div>
+					<SiTailwindcss id="tailwindLogo" />
+					<span>Tailwind</span>
 				</div>
 				<div>
 					<SiPostman id="postmanLogo" />

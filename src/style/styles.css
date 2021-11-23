@@ -1247,6 +1247,14 @@
   color: #e44b2f;
 }
 
+.aboutContainer .aboutTech div #bootstrapLogo:hover {
+  color: #7310ed;
+}
+
+.aboutContainer .aboutTech div #tailwindLogo:hover {
+  color: #15b4c1;
+}
+
 .aboutContainer .aboutTech span {
   opacity: 0;
   white-space: nowrap;
