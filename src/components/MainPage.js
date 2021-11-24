@@ -5,26 +5,32 @@ import NavBar from './NavBar';
 import Contact from './Contact';
 import { useState } from 'react';
 
-export default ({ position, setPosition, switchTheme }) => {
-	const inWhatProject = (cTopPos, ProjectHeight) => {
-		const cBotPos = cTopPos + ProjectHeight;
-		setPosition(Math.round((cBotPos - 10) / ProjectHeight));
-		// console.log(cBotPos);
-	};
+export default ({
+	position,
+	setPosition,
+	switchTheme,
+	setFirstHeight,
+	setSecondHeight,
+	setThirdHeight,
+}) => {
 	return (
 		<div className="mainPageDiv" id="mainPage">
 			<Router>
 				<NavBar switchTheme={switchTheme} />
 				<div className="routeContainer">
-					<div
-						className="componentContainer"
-						id="componentContainer"
-						onScroll={(e) => {
-							inWhatProject(e.target.scrollTop, e.target.offsetHeight);
-						}}
-					>
+					<div className="componentContainer" id="componentContainer">
 						<Routes>
-							<Route path="/" element={<Portfolio position={position} />} />
+							<Route
+								path="/"
+								element={
+									<Portfolio
+										setFirstHeight={setFirstHeight}
+										setSecondHeight={setSecondHeight}
+										setThirdHeight={setThirdHeight}
+										position={position}
+									/>
+								}
+							/>
 							<Route path="/about" exact element={<About />} />
 							<Route path="/contact" exact element={<Contact />} />
 						</Routes>

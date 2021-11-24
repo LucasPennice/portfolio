@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { AiFillHtml5 } from 'react-icons/ai';
 import {
 	SiJavascript,
@@ -16,7 +16,9 @@ export default ({
 	position,
 	projPosition,
 	children,
+	setHeight,
 }) => {
+	const ref = useRef(null);
 	const { title, paragraphArray, github, live, d1, d2, m1, m2, techUsed } =
 		project;
 	const [mobileImg, setMobileImg] = useState(m1);
@@ -34,6 +36,8 @@ export default ({
 			const img = new Image();
 			img.src = image;
 		});
+
+		setHeight(ref.current.clientHeight);
 	}, []);
 
 	const printArrays = () => {
@@ -105,14 +109,14 @@ export default ({
 		let id2 = null;
 
 		if (position === projPosition) {
-			setParagraphClass('projectParagraph animateProject');
 			id2 = setTimeout(() => {
+				setParagraphClass('projectParagraph animateProject');
 				setTitleClass('projectTitle animateProject');
 			}, 100);
 		}
 		if (position !== projPosition) {
-			setTitleClass('projectTitle goingAway');
 			id = setTimeout(() => {
+				setTitleClass('projectTitle goingAway');
 				setParagraphClass('projectParagraph goingAway');
 			}, 100);
 		}
@@ -123,58 +127,54 @@ export default ({
 	}, [position]);
 
 	return (
-		<>
-			{
-				<div className="projectContainer" key={title} id={title}>
-					<div className="projectText">
-						<h1 className={titleClass}>{title}</h1>
-						{children}
-						<div className="projectArrayContainer">{printArrays()}</div>
-						<div className="linksContainer">
-							<a href={github} target="_blank">
-								<AiFillGithub />
-							</a>
-							<a href={live} target="_blank">
-								<AiOutlineDeploymentUnit />
-							</a>
-							{prevProject === '' ? (
-								<></>
-							) : (
-								<a href={`#${prevProject}`}>
-									<CgArrowUpR />
-								</a>
-							)}
-							{nextProject === '' ? (
-								<></>
-							) : (
-								<a href={`#${nextProject}`}>
-									<CgArrowDownR />
-								</a>
-							)}
-						</div>
-					</div>
-					<div className="projectImages">
-						<img
-							onClick={() => {
-								changeImage(desktopImg, setDesktopImg, 'desktop');
-								changeIndex(desktopClass);
-							}}
-							className={desktopClass}
-							src={desktopImg}
-							style={{ opacity: desktopOpacity }}
-						/>
-						<img
-							onClick={() => {
-								changeImage(mobileImg, setMobileImg, 'mobile');
-								changeIndex(mobileClass);
-							}}
-							className={mobileClass}
-							src={mobileImg}
-							style={{ opacity: mobileOpacity }}
-						/>
-					</div>
+		<div className="projectContainer" ref={ref} key={title} id={title}>
+			<div className="projectText">
+				<h1 className={titleClass}>{title}</h1>
+				{children}
+				<div className="projectArrayContainer">{printArrays()}</div>
+				<div className="linksContainer">
+					<a href={github} target="_blank">
+						<AiFillGithub />
+					</a>
+					<a href={live} target="_blank">
+						<AiOutlineDeploymentUnit />
+					</a>
+					{prevProject === '' ? (
+						<></>
+					) : (
+						<a href={`#${prevProject}`}>
+							<CgArrowUpR />
+						</a>
+					)}
+					{nextProject === '' ? (
+						<></>
+					) : (
+						<a href={`#${nextProject}`}>
+							<CgArrowDownR />
+						</a>
+					)}
 				</div>
-			}
-		</>
+			</div>
+			<div className="projectImages">
+				<img
+					onClick={() => {
+						changeImage(desktopImg, setDesktopImg, 'desktop');
+						changeIndex(desktopClass);
+					}}
+					className={desktopClass}
+					src={desktopImg}
+					style={{ opacity: desktopOpacity }}
+				/>
+				<img
+					onClick={() => {
+						changeImage(mobileImg, setMobileImg, 'mobile');
+						changeIndex(mobileClass);
+					}}
+					className={mobileClass}
+					src={mobileImg}
+					style={{ opacity: mobileOpacity }}
+				/>
+			</div>
+		</div>
 	);
 };

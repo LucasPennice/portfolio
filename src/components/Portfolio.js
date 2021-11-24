@@ -4,7 +4,12 @@ import WineStoreTech from './WineStoreTech';
 import SearchShowTech from './SearchShowTech';
 import WeatherAppTech from './WeatherAppTech';
 
-export default ({ position }) => {
+export default ({
+	position,
+	setFirstHeight,
+	setSecondHeight,
+	setThirdHeight,
+}) => {
 	const winestoreProject = {
 		title: 'winestore',
 		paragraphArray: [
@@ -54,6 +59,7 @@ export default ({ position }) => {
 				nextProject="weatherapp"
 				position={position}
 				projPosition={1}
+				setHeight={setFirstHeight}
 			>
 				<SearchShowTech />
 			</Project>
@@ -63,6 +69,7 @@ export default ({ position }) => {
 				position={position}
 				nextProject="winestore"
 				projPosition={2}
+				setHeight={setSecondHeight}
 			>
 				<WeatherAppTech />
 			</Project>
@@ -72,6 +79,7 @@ export default ({ position }) => {
 				position={position}
 				nextProject=""
 				projPosition={3}
+				setHeight={setThirdHeight}
 			>
 				<WineStoreTech />
 			</Project>

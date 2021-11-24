@@ -62,7 +62,7 @@ $transparent: rgba(37, 38, 39, 0);
 
 .mainPageDiv {
 	background-color: $backgroundColor;
-	height: 100vh;
+	// height: 100vh;
 
 	.navBar {
 		font-weight: 200;
@@ -99,13 +99,13 @@ $transparent: rgba(37, 38, 39, 0);
 }
 
 .routeContainer {
-	height: calc(100vh - clamp(12px, 3vw, 32px) - 40px);
+	// height: calc(100vh - clamp(12px, 3vw, 32px) - 40px);
 	@include center;
 
 	.componentContainer {
 		background-color: $backgroundColor;
 		overflow-y: scroll;
-		height: 90%;
+		// height: 90%;
 		width: 95%;
 	}
 }

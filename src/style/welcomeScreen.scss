@@ -36,7 +36,7 @@
 				height: 100%;
 				width: 0%;
 				background-color: $darkColor100;
-				animation: typeName 2s linear;
+				animation: typeName 1s linear;
 			}
 
 			&:hover::before {
@@ -58,7 +58,7 @@
 				height: 100%;
 				background-color: $darkColor100;
 				z-index: 1;
-				animation: frontEndAppear 1s ease-in-out 2.1s;
+				animation: frontEndAppear 1s ease-in-out 1.1s;
 			}
 
 			&:hover .frontEndDeveloper {
@@ -80,7 +80,7 @@
 				text-transform: lowercase;
 				color: rgba(0, 0, 0, 0.45);
 				opacity: 0;
-				animation: opacityAppear 2.4s forwards 0.35s;
+				animation: opacityAppear 1.4s forwards 0.35s;
 			}
 
 			.middleBar {
@@ -90,7 +90,7 @@
 				transition: 0.2s ease-in-out;
 				position: relative;
 				opacity: 0;
-				animation: opacityAppear 2.4s forwards;
+				animation: opacityAppear 1.4s forwards;
 
 				&::before {
 					content: '';
@@ -99,7 +99,7 @@
 					width: 0%;
 					opacity: 0;
 					height: 100%;
-					animation: opacityAppear 0.01s forwards 2.4s;
+					animation: opacityAppear 0.01s forwards 1.4s;
 					transition: 0.2s ease-in-out;
 				}
 				&:nth-of-type(1)::before {
@@ -120,7 +120,7 @@
 		// background-color: greenyellow;
 		transform: rotate(45deg);
 		opacity: 0;
-		animation: fadeIn 0.2s forwards 3.3s;
+		animation: fadeIn 0.2s forwards 2.3s;
 
 		&:hover .square {
 			background-color: black;

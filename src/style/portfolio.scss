@@ -1,9 +1,12 @@
 .projectContainer {
 	display: flex;
+	align-items: center;
 	height: 100%;
 	gap: 3rem;
 	opacity: 0;
 	animation: fadeInOpacity 0.2s forwards 0.1s;
+	min-height: 100vh;
+	padding-bottom: 8rem;
 
 	.projectText {
 		font-weight: 200;
@@ -43,7 +46,7 @@
 				//iconos
 				color: $backgroundColor;
 				background-color: $darkColor100;
-				font-size: clamp(2rem, 6vw, 3rem);
+				font-size: clamp(2rem, 4vw, 3rem);
 				padding: 0.5rem;
 				transition: 0.2s;
 
@@ -155,6 +158,8 @@
 .projectImages {
 	width: 55%;
 	position: relative;
+	@include center;
+	justify-content: flex-end;
 
 	.desktopImages {
 		position: absolute;
@@ -173,11 +178,8 @@
 	}
 	.mobileImages {
 		cursor: pointer;
-		position: absolute;
 		transition: 0.2s;
-		right: 10%;
 		border: 1px solid $darkColor100;
-		top: 10%;
 		// width: calc(375px / 1.5);
 		width: clamp(5rem, 16vw, 250px); //1
 		// height: calc(812px / 1.5);

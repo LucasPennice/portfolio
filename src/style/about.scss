@@ -1,6 +1,10 @@
 .aboutContainer {
 	opacity: 0;
 	margin-right: 1rem;
+	min-height: calc(100vh - clamp(12px, 3vw, 32px) - 40px);
+	padding-top: clamp(1rem, 4vw, 4rem);
+	padding-bottom: clamp(1rem, 4vw, 4rem);
+
 	animation: fadeInOpacity 0.2s forwards 0.1s;
 	overflow-y: scroll;
 	padding-left: clamp(1rem, 4vw, 4rem);
