@@ -28,6 +28,62 @@
   background: #252627;
 }
 
+#reactLogo:hover {
+  color: #61dbfb;
+}
+
+#reduxLogo:hover {
+  color: #764abd;
+}
+
+#routerLogo:hover {
+  color: #ca4245;
+}
+
+#jsLogo:hover {
+  color: #ead41c;
+}
+
+#htmlLogo:hover {
+  color: #d84923;
+}
+
+#sassLogo:hover {
+  color: #ca689b;
+}
+
+#postmanLogo:hover {
+  color: #e7663a;
+}
+
+#xdLogo:hover {
+  color: #f229b8;
+}
+
+#vscodeLogo:hover {
+  color: #379fe7;
+}
+
+#gitLogo:hover {
+  color: #e44b2f;
+}
+
+#bootstrapLogo:hover {
+  color: #7310ed;
+}
+
+#tailwindLogo:hover {
+  color: #15b4c1;
+}
+
+#nodeLogo:hover {
+  color: #89bb3c;
+}
+
+#expressLogo:hover {
+  color: #89bb3c;
+}
+
 @-webkit-keyframes squareAnim {
   from {
     border-radius: 0%;
@@ -1222,54 +1278,6 @@
   opacity: 1;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
-}
-
-.aboutContainer .aboutTech div #reactLogo:hover {
-  color: #61dbfb;
-}
-
-.aboutContainer .aboutTech div #reduxLogo:hover {
-  color: #764abd;
-}
-
-.aboutContainer .aboutTech div #routerLogo:hover {
-  color: #ca4245;
-}
-
-.aboutContainer .aboutTech div #jsLogo:hover {
-  color: #ead41c;
-}
-
-.aboutContainer .aboutTech div #htmlLogo:hover {
-  color: #d84923;
-}
-
-.aboutContainer .aboutTech div #sassLogo:hover {
-  color: #ca689b;
-}
-
-.aboutContainer .aboutTech div #postmanLogo:hover {
-  color: #e7663a;
-}
-
-.aboutContainer .aboutTech div #xdLogo:hover {
-  color: #f229b8;
-}
-
-.aboutContainer .aboutTech div #vscodeLogo:hover {
-  color: #379fe7;
-}
-
-.aboutContainer .aboutTech div #gitLogo:hover {
-  color: #e44b2f;
-}
-
-.aboutContainer .aboutTech div #bootstrapLogo:hover {
-  color: #7310ed;
-}
-
-.aboutContainer .aboutTech div #tailwindLogo:hover {
-  color: #15b4c1;
 }
 
 .aboutContainer .aboutTech span {

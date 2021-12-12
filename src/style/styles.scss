@@ -49,7 +49,7 @@ $transparent: rgba(37, 38, 39, 0);
 	// background: rgb(37, 38, 39);
 	background: $darkColor100;
 }
-
+@import 'iconStyles';
 @import 'animations';
 @import 'welcomeScreen';
 @import 'portfolio';

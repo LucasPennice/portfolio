@@ -1,0 +1,56 @@
+#reactLogo:hover {
+  color: #61dbfb;
+}
+
+#reduxLogo:hover {
+  color: #764abd;
+}
+
+#routerLogo:hover {
+  color: #ca4245;
+}
+
+#jsLogo:hover {
+  color: #ead41c;
+}
+
+#htmlLogo:hover {
+  color: #d84923;
+}
+
+#sassLogo:hover {
+  color: #ca689b;
+}
+
+#postmanLogo:hover {
+  color: #e7663a;
+}
+
+#xdLogo:hover {
+  color: #f229b8;
+}
+
+#vscodeLogo:hover {
+  color: #379fe7;
+}
+
+#gitLogo:hover {
+  color: #e44b2f;
+}
+
+#bootstrapLogo:hover {
+  color: #7310ed;
+}
+
+#tailwindLogo:hover {
+  color: #15b4c1;
+}
+
+#nodeLogo:hover {
+  color: #89bb3c;
+}
+
+#expressLogo:hover {
+  color: #89bb3c;
+}
+/*# sourceMappingURL=iconStyles.css.map */
