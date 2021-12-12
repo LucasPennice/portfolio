@@ -1,25 +1,18 @@
 import { useState, useEffect, useRef } from 'react';
-import { AiFillHtml5 } from 'react-icons/ai';
-import {
-	SiJavascript,
-	SiSass,
-	SiReact,
-	SiReactrouter,
-	SiRedux,
-} from 'react-icons/si';
 import { AiFillGithub, AiOutlineDeploymentUnit } from 'react-icons/ai';
 import { CgArrowUpR, CgArrowDownR } from 'react-icons/cg';
+import { renderTechIcons } from '../config/functions';
 export default ({
 	project,
 	prevProject,
 	nextProject,
 	position,
 	projPosition,
-	children,
 	setHeight,
+	projectsHeight,
 }) => {
 	const ref = useRef(null);
-	const { title, paragraphArray, github, live, d1, d2, m1, m2, techUsed } =
+	const { title, paragraphArray, github, live, d1, d2, m1, m2, tech_used } =
 		project;
 	const [mobileImg, setMobileImg] = useState(m1);
 	const [mobileClass, setMobileClass] = useState('mobileImages behind');
@@ -29,6 +22,12 @@ export default ({
 	const [paragraphClass, setParagraphClass] = useState('projectParagraph');
 	const [desktopClass, setDesktopClass] = useState('desktopImages inFront');
 	const [desktopOpacity, setDesktopOpacity] = useState(1);
+	//se borra si falla
+	const getCurrentProjectHeight = () => {
+		let heightArr = projectsHeight;
+		heightArr[projPosition] = ref.current.clientHeight;
+		return heightArr;
+	};
 
 	useEffect(() => {
 		const ImgArray = [d1, d2, m1, m2];
@@ -37,7 +36,8 @@ export default ({
 			img.src = image;
 		});
 
-		setHeight(ref.current.clientHeight);
+		// setHeight(ref.current.clientHeight);
+		setHeight(getCurrentProjectHeight());
 	}, []);
 
 	const printArrays = () => {
@@ -130,13 +130,13 @@ export default ({
 		<div className="projectContainer" ref={ref} key={title} id={title}>
 			<div className="projectText">
 				<h1 className={titleClass}>{title}</h1>
-				{children}
+				<div className="techUsed">{renderTechIcons(tech_used)}</div>
 				<div className="projectArrayContainer">{printArrays()}</div>
 				<div className="linksContainer">
-					<a href={github} target="_blank">
+					<a href={github} target="_blank" rel="noreferrer">
 						<AiFillGithub />
 					</a>
-					<a href={live} target="_blank">
+					<a href={live} target="_blank" rel="noreferrer">
 						<AiOutlineDeploymentUnit />
 					</a>
 					{prevProject === '' ? (

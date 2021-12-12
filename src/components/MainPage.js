@@ -3,15 +3,12 @@ import Portfolio from './Portfolio';
 import About from './About';
 import NavBar from './NavBar';
 import Contact from './Contact';
-import { useState } from 'react';
 
 export default ({
 	position,
-	setPosition,
 	switchTheme,
-	setFirstHeight,
-	setSecondHeight,
-	setThirdHeight,
+	setProjectsHeight,
+	projectsHeight,
 }) => {
 	return (
 		<div className="mainPageDiv" id="mainPage">
@@ -24,10 +21,9 @@ export default ({
 								path="/"
 								element={
 									<Portfolio
-										setFirstHeight={setFirstHeight}
-										setSecondHeight={setSecondHeight}
-										setThirdHeight={setThirdHeight}
 										position={position}
+										projectsHeight={projectsHeight}
+										setProjectsHeight={setProjectsHeight}
 									/>
 								}
 							/>

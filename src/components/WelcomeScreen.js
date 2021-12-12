@@ -5,7 +5,7 @@ export default ({ setPosition, isFirstRender, setIsFirstRender }) => {
 				<div className="lucasPennice">LUCAS PENNICE</div>
 				<div className="frontEndContainer">
 					<div id="bar1" className="middleBar"></div>
-					<div className="frontEndDeveloper">front end developer</div>
+					<div className="frontEndDeveloper">full stack developer</div>
 					<div id="bar2" className="middleBar"></div>
 				</div>
 			</div>

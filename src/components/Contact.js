@@ -24,13 +24,21 @@ export default () => {
 			</div>
 			<div className="iconsContact">
 				<div>
-					<a href="http://www.linkedin.com/in/lucas-pennice" target="_blank">
+					<a
+						href="http://www.linkedin.com/in/lucas-pennice"
+						target="_blank"
+						rel="noreferrer"
+					>
 						<AiFillLinkedin id="linkedin" />
 					</a>
 					<span>LinkedIn</span>
 				</div>
 				<div>
-					<a href="https://github.com/LucasPennice" target="_blank">
+					<a
+						href="https://github.com/LucasPennice"
+						target="_blank"
+						rel="noreferrer"
+					>
 						<AiFillGithub id="github" />
 					</a>
 					<span>GitHub</span>
@@ -39,13 +47,18 @@ export default () => {
 					<a
 						href="https://docs.google.com/document/d/e/2PACX-1vRu_S7LLF2c33QBm_Aw21__6pLKNl9GLv95IwgdpNcO2zIdTT6mGAzxz3QESO1w3cagji3VDmqRet7y/pub"
 						target="_blank"
+						rel="noreferrer"
 					>
 						<AiTwotoneFolderOpen id="resume" />
 					</a>
 					<span>CV</span>
 				</div>
 				<div>
-					<a href="https://wa.me/5493413584946" target="_blank">
+					<a
+						href="https://wa.me/5493413584946"
+						target="_blank"
+						rel="noreferrer"
+					>
 						<AiOutlineWhatsApp id="whatsapp" />
 					</a>
 					<span>WhatsApp</span>
