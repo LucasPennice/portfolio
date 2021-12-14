@@ -1,5 +1,6 @@
 import {
 	SiVisualstudiocode,
+	SiHeroku,
 	SiJavascript,
 	SiSass,
 	SiReact,
@@ -7,6 +8,7 @@ import {
 	SiRedux,
 	SiPostman,
 	SiExpress,
+	SiVercel,
 	SiNodedotjs,
 	SiTailwindcss,
 	SiAdobexd,
@@ -33,4 +35,6 @@ export const logosArray = [
 	{ Icon: <BiGitBranch id="gitLogo" />, tech_name: 'Git' },
 	{ Icon: <SiExpress id="expressLogo" />, tech_name: 'Express.js' },
 	{ Icon: <SiNodedotjs id="nodeLogo" />, tech_name: 'Node.js' },
+	{ Icon: <SiVercel id="vercelLogo" />, tech_name: 'Vercel' },
+	{ Icon: <SiHeroku id="herokuLogo" />, tech_name: 'Heroku' },
 ];

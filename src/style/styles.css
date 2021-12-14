@@ -84,6 +84,14 @@
   color: #89bb3c;
 }
 
+#vercelLogo:hover {
+  color: #79ffe1;
+}
+
+#herokuLogo:hover {
+  color: #625d9e;
+}
+
 @-webkit-keyframes squareAnim {
   from {
     border-radius: 0%;
