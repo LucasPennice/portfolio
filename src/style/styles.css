@@ -92,6 +92,14 @@
   color: #625d9e;
 }
 
+#mongoLogo:hover {
+  color: #3f9b38;
+}
+
+#passportLogo:hover {
+  color: #00b9f1;
+}
+
 @-webkit-keyframes squareAnim {
   from {
     border-radius: 0%;

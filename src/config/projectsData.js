@@ -1,13 +1,43 @@
 import { AiFillHtml5 } from 'react-icons/ai';
 import {
+	SiVisualstudiocode,
+	SiHeroku,
 	SiJavascript,
 	SiSass,
 	SiReact,
 	SiReactrouter,
 	SiRedux,
+	SiPostman,
+	SiPassport,
+	SiExpress,
+	SiMongodb,
+	SiVercel,
+	SiNodedotjs,
+	SiTailwindcss,
+	SiAdobexd,
 } from 'react-icons/si';
 
 export const projectsArray = [
+	{
+		title: 'petwork',
+		paragraphArray: [
+			'a full stack web app that allows the user to post, edit and delete a mock work proposal for their pets',
+			'used express.js for the routing, passport.js for authentication and MongoDB Atlas as the database',
+		],
+		d1: 'https://i.imgur.com/IAEBksX.png',
+		d2: 'https://i.imgur.com/5noHwKZ.png',
+		m1: 'https://i.imgur.com/5oBKfVV.png',
+		m2: 'https://i.imgur.com/vAVLDdx.png',
+		github: 'https://github.com/LucasPennice/PetLinkedIn',
+		live: 'https://pet-work.herokuapp.com/',
+		tech_used: [
+			{ Icon: <SiReact id="reactLogo" />, tech_name: 'React.js' },
+			{ Icon: <SiExpress id="expressLogo" />, tech_name: 'Express.js' },
+			{ Icon: <SiNodedotjs id="nodeLogo" />, tech_name: 'Node.js' },
+			{ Icon: <SiMongodb id="mongoLogo" />, tech_name: 'MongoDB' },
+			{ Icon: <SiPassport id="passportLogo" />, tech_name: 'Passport.js' },
+		],
+	},
 	{
 		title: 'showsearch',
 		paragraphArray: [
@@ -46,22 +76,22 @@ export const projectsArray = [
 			{ Icon: <SiSass id="sassLogo" />, tech_name: 'Sass' },
 		],
 	},
-	{
-		title: 'winestore',
-		paragraphArray: [
-			'a landing page for a subscription based wine business',
-			'Used JavaScript to create a custom menu, image slider and mocked customers reviews that change on every refresh using RandomUser’s API',
-		],
-		d1: 'https://i.imgur.com/yvzVrFF.png',
-		d2: 'https://i.imgur.com/TtD25Kc.png',
-		m1: 'https://i.imgur.com/cJccoDA.png',
-		m2: 'https://i.imgur.com/FwG7XDJ.png',
-		github: 'https://github.com/LucasPennice/OnlineWinestoreLanding',
-		live: 'https://online-winestore-landing.vercel.app/',
-		tech_used: [
-			{ Icon: <SiJavascript id="jsLogo" />, tech_name: 'JavaScript' },
-			{ Icon: <SiSass id="sassLogo" />, tech_name: 'Sass' },
-			{ Icon: <AiFillHtml5 id="htmlLogo" />, tech_name: 'HTML5' },
-		],
-	},
+	// {
+	// 	title: 'winestore',
+	// 	paragraphArray: [
+	// 		'a landing page for a subscription based wine business',
+	// 		'Used JavaScript to create a custom menu, image slider and mocked customers reviews that change on every refresh using RandomUser’s API',
+	// 	],
+	// 	d1: 'https://i.imgur.com/yvzVrFF.png',
+	// 	d2: 'https://i.imgur.com/TtD25Kc.png',
+	// 	m1: 'https://i.imgur.com/cJccoDA.png',
+	// 	m2: 'https://i.imgur.com/FwG7XDJ.png',
+	// 	github: 'https://github.com/LucasPennice/OnlineWinestoreLanding',
+	// 	live: 'https://online-winestore-landing.vercel.app/',
+	// 	tech_used: [
+	// 		{ Icon: <SiJavascript id="jsLogo" />, tech_name: 'JavaScript' },
+	// 		{ Icon: <SiSass id="sassLogo" />, tech_name: 'Sass' },
+	// 		{ Icon: <AiFillHtml5 id="htmlLogo" />, tech_name: 'HTML5' },
+	// 	],
+	// },
 ];
