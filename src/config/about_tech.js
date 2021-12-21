@@ -19,7 +19,7 @@ import { BsFillBootstrapFill } from 'react-icons/bs';
 import { BiGitBranch } from 'react-icons/bi';
 import { AiFillHtml5 } from 'react-icons/ai';
 
-export const logosArray = [
+export const frontendLogosArray = [
 	{ Icon: <SiReact id="reactLogo" />, tech_name: 'React' },
 	{ Icon: <SiRedux id="reduxLogo" />, tech_name: 'Redux' },
 	{ Icon: <SiReactrouter id="routerLogo" />, tech_name: 'React-Router' },
@@ -30,15 +30,20 @@ export const logosArray = [
 		Icon: <BsFillBootstrapFill id="bootstrapLogo" />,
 		tech_name: 'Bootstrap',
 	},
-	{ Icon: <SiTailwindcss id="tailwindLogo" />, tech_name: 'TailwindCss' },
+];
+
+export const backendLogosArray = [
+	{ Icon: <SiPassport id="passportLogo" />, tech_name: 'Passport.js' },
+	{ Icon: <SiNodedotjs id="nodeLogo" />, tech_name: 'Node.js' },
+	{ Icon: <SiMongodb id="mongoLogo" />, tech_name: 'MongoDB' },
+	{ Icon: <SiExpress id="expressLogo" />, tech_name: 'Express.js' },
+];
+
+export const toolsLogosArray = [
 	{ Icon: <SiPostman id="postmanLogo" />, tech_name: 'Postman' },
 	{ Icon: <SiAdobexd id="xdLogo" />, tech_name: 'AdobeXD' },
 	{ Icon: <SiVisualstudiocode id="vscodeLogo" />, tech_name: 'VsCode' },
 	{ Icon: <BiGitBranch id="gitLogo" />, tech_name: 'Git' },
-	{ Icon: <SiMongodb id="mongoLogo" />, tech_name: 'MongoDB' },
-	{ Icon: <SiExpress id="expressLogo" />, tech_name: 'Express.js' },
-	{ Icon: <SiNodedotjs id="nodeLogo" />, tech_name: 'Node.js' },
 	{ Icon: <SiVercel id="vercelLogo" />, tech_name: 'Vercel' },
 	{ Icon: <SiHeroku id="herokuLogo" />, tech_name: 'Heroku' },
-	{ Icon: <SiPassport id="passportLogo" />, tech_name: 'Passport.js' },
 ];

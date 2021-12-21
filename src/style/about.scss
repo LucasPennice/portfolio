@@ -78,6 +78,14 @@
 			width: clamp(4rem, 6vw, 5rem);
 			flex-direction: column;
 			align-items: center;
+			span {
+				opacity: 1;
+				white-space: nowrap;
+				transform: translateY(0px);
+				font-size: 1rem;
+				transition: 0.2s;
+				font-weight: 200;
+			}
 			& > :first-child {
 				//iconos
 				color: $backgroundColor;
@@ -91,13 +99,6 @@
 					transform: translateY(0px);
 				}
 			}
-		}
-		span {
-			opacity: 0;
-			white-space: nowrap;
-			transform: translateY(-10px);
-			transition: 0.2s;
-			font-weight: 100;
 		}
 	}
 }

@@ -1,6 +1,10 @@
 import { BiCog } from 'react-icons/bi';
 import { AiOutlineBulb, AiOutlineCode } from 'react-icons/ai';
-import { logosArray } from '../config/about_tech';
+import {
+	frontendLogosArray,
+	backendLogosArray,
+	toolsLogosArray,
+} from '../config/about_tech';
 import { renderTechIcons } from '../config/functions';
 
 export default () => {
@@ -27,8 +31,12 @@ export default () => {
 					<span>Web Developer</span>
 				</div>
 			</div>
-			<h1 className="aboutTitle">technical skills</h1>
-			<div className="aboutTech">{renderTechIcons(logosArray)}</div>
+			<h1 className="aboutTitle">frontend technical skills</h1>
+			<div className="aboutTech">{renderTechIcons(frontendLogosArray)}</div>
+			<h1 className="aboutTitle">backend technical skills</h1>
+			<div className="aboutTech">{renderTechIcons(backendLogosArray)}</div>{' '}
+			<h1 className="aboutTitle">tools</h1>
+			<div className="aboutTech">{renderTechIcons(toolsLogosArray)}</div>
 		</div>
 	);
 };

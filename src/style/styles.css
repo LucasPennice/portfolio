@@ -1281,6 +1281,17 @@
           align-items: center;
 }
 
+.aboutContainer .aboutTech div span {
+  opacity: 1;
+  white-space: nowrap;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  font-size: 1rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-weight: 200;
+}
+
 .aboutContainer .aboutTech div > :first-child {
   color: #f9f9f9;
   background-color: #252627;
@@ -1294,16 +1305,6 @@
   opacity: 1;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
-}
-
-.aboutContainer .aboutTech span {
-  opacity: 0;
-  white-space: nowrap;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  font-weight: 100;
 }
 
 #cog:hover + span {
