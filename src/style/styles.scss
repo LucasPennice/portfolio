@@ -67,16 +67,25 @@ $transparent: rgba(37, 38, 39, 0);
 	.navBar {
 		font-weight: 200;
 		font-size: clamp(12px, 3vw, 32px);
-		padding-top: 40px;
-		@include center;
-		position: relative;
-		padding-bottom: 0.2rem;
+		padding: 1rem 0rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: transparentize($color: $backgroundColor, $amount: 0.2);
+		backdrop-filter: blur(1rem);
+		gap: 1px;
+		position: sticky;
+		z-index: 5;
+		top: 0em;
 
 		a {
-			padding: 0px clamp(15px, 3vw, 50px);
+			padding: 0rem clamp(15px, 3vw, 50px);
 			border-style: none solid none none;
+			z-index: 6;
+
 			// border-color: rgba(112, 112, 112, 0.52);
 			border-color: $lightColor40;
+
 			border-width: 1px;
 			text-decoration: none;
 			color: $darkColor100;
@@ -96,6 +105,11 @@ $transparent: rgba(37, 38, 39, 0);
 			font-size: clamp(12px, 3vw, 32px);
 		}
 	}
+}
+
+.currentClass {
+	outline: 1px solid $darkColor100 !important;
+	outline-offset: 0px !important;
 }
 
 .routeContainer {
