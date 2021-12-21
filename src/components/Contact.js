@@ -7,7 +7,7 @@ import {
 
 export default () => {
 	return (
-		<div className="contactDiv">
+		<div className="contactDiv" id="contact">
 			<div className="myInfo">
 				<div>
 					<span>{`<name/>`}</span>Lucas Pennice

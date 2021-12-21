@@ -17,7 +17,7 @@ import {
 } from 'react-icons/si';
 import { BsFillBootstrapFill } from 'react-icons/bs';
 import { BiGitBranch } from 'react-icons/bi';
-import { AiFillHtml5 } from 'react-icons/ai';
+import { AiFillHtml5, AiFillApi } from 'react-icons/ai';
 
 export const frontendLogosArray = [
 	{ Icon: <SiReact id="reactLogo" />, tech_name: 'React' },
@@ -30,6 +30,7 @@ export const frontendLogosArray = [
 		Icon: <BsFillBootstrapFill id="bootstrapLogo" />,
 		tech_name: 'Bootstrap',
 	},
+	{ Icon: <AiFillApi id="reactLogo" />, tech_name: 'API' },
 ];
 
 export const backendLogosArray = [

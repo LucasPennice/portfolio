@@ -14,7 +14,7 @@ export default ({
 		<div className="mainPageDiv" id="mainPage">
 			<Router>
 				<NavBar switchTheme={switchTheme} />
-				<div className="routeContainer">
+				{/* <div className="routeContainer">
 					<div className="componentContainer" id="componentContainer">
 						<Routes>
 							<Route
@@ -31,8 +31,15 @@ export default ({
 							<Route path="/contact" exact element={<Contact />} />
 						</Routes>
 					</div>
-				</div>
+				</div> */}
 			</Router>
+			<Portfolio
+				position={position}
+				projectsHeight={projectsHeight}
+				setProjectsHeight={setProjectsHeight}
+			/>
+			<About />
+			<Contact />
 		</div>
 	);
 };

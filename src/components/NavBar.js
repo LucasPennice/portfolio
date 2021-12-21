@@ -17,8 +17,8 @@ export default ({ switchTheme }) => {
 	return (
 		<nav className="navBar">
 			<div className="selectedDiv"></div>
-			<Link
-				to="/"
+			<a
+				href="#projects"
 				onClick={(e) => {
 					onAnchorClick(e);
 					onWhatSection('/');
@@ -26,22 +26,22 @@ export default ({ switchTheme }) => {
 				className={isCurrentPage('/')}
 			>
 				projects
-			</Link>
-			<Link
-				to="/about"
+			</a>
+			<a
+				href="#about"
 				id="/about"
 				className={isCurrentPage('/about')}
 				onClick={() => onWhatSection('/about')}
 			>
 				about
-			</Link>
-			<Link
-				to="/contact"
+			</a>
+			<a
+				href="#contact"
 				className={isCurrentPage('/contact')}
 				onClick={() => onWhatSection('/contact')}
 			>
 				contact
-			</Link>
+			</a>
 		</nav>
 	);
 };

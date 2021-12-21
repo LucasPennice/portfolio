@@ -18,7 +18,7 @@ export default ({ position, setProjectsHeight, projectsHeight }) => {
 	};
 
 	return (
-		<>
+		<div id="projects">
 			{projectsArray.map((project) => {
 				const { title } = project;
 				return (
@@ -34,6 +34,6 @@ export default ({ position, setProjectsHeight, projectsHeight }) => {
 					/>
 				);
 			})}
-		</>
+		</div>
 	);
 };

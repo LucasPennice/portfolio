@@ -9,7 +9,7 @@ import { renderTechIcons } from '../config/functions';
 
 export default () => {
 	return (
-		<div className="aboutContainer">
+		<div className="aboutContainer" id="about">
 			<h1 className="aboutTitle">about me</h1>
 			<p className="aboutText">
 				My name is Lucas Pennice and I’m a MERN stack developer looking for an
