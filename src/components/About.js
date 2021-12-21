@@ -12,10 +12,29 @@ export default () => {
 		<div className="aboutContainer">
 			<h1 className="aboutTitle">about me</h1>
 			<p className="aboutText">
-				I’m a highly driven individual, who is deeply passionate about web
-				development. I’m always learning, and looking for the next challenge.
-				One of my main interests is creating beautiful and responsive websites
-				and web applications, improve my team-working skills and keep learning
+				My name is Lucas Pennice and I’m a MERN stack developer looking for an
+				entry-level position as a front end or full stack developer. I live in
+				Argentina but I’m willing to work remotely
+			</p>
+			<p className="aboutText">
+				I’m always learning, and looking for the next challenge. Some of my main
+				interests are creating useful, responsive websites and web applications,
+				improve my team-working skills, learn to write better code and keep
+				discovering new technologies to work with
+			</p>
+			<p className="aboutText">
+				I began my coding journey in highschool when I took three years of C, it
+				was mostly based on solvin algorithmic problems. After finishing
+				highschool I started studying civil engineer, but it didn't feel like a
+				good fit for me. I wanted to be able to build projects and see them
+				grow, after a couple of weeks I enrolled in another college to study
+				system engineering
+			</p>
+			<p className="aboutText">
+				Meanwhile I began to teach myself coding using freeCodeCamp, Udemy
+				courses and Youtube videos. Later on I started reading books (such as
+				Eloquent JavaScript by Marijn Haverbeke) and watching talks about how to
+				write better code (such as Clean Code by Robert C. Martin)
 			</p>
 			<div className="aboutIcons">
 				<div>
