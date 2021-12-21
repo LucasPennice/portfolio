@@ -21,6 +21,7 @@ export const projectsArray = [
 	{
 		title: 'petwork',
 		paragraphArray: [
+			'react.js, express.js, node.js, mongodb, passport.js',
 			'a full stack web app that allows the user to post, edit and delete a mock work proposal for their pets',
 			'used express.js for the routing, passport.js for authentication and MongoDB Atlas as the database',
 		],
@@ -41,6 +42,7 @@ export const projectsArray = [
 	{
 		title: 'showsearch',
 		paragraphArray: [
+			'react.js, react-redux, react-router, sass',
 			'a React web app that allows the user to search for any tv show and get detailed information on each one when clicked. It also allows the user to go watch the show by clicking the show’s title. To access the data I worked with TvMaze’s API.',
 			'Used Redux (& Thunk) to manage state and React-Router to control what component to render depending on the url.',
 		],
@@ -60,6 +62,7 @@ export const projectsArray = [
 	{
 		title: 'weatherapp',
 		paragraphArray: [
+			'react.js, react-redux, sass',
 			'a React web app that allows the user to check the current weather, and forecast of any city. It also allows the user to toggle between fahrenheit and celsius by clicking on the current temperature and to check the temperature hour by hour hovering on the graph.',
 			'To access the weather data I worked with WeatherAPI’s API',
 			'Continued development by refactoring the code and implemented Redux for better state management.',

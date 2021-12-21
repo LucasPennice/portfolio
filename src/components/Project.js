@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { AiFillGithub, AiOutlineDeploymentUnit } from 'react-icons/ai';
+import { AiFillGithub, AiOutlineCloudServer } from 'react-icons/ai';
 import { CgArrowUpR, CgArrowDownR } from 'react-icons/cg';
 import { renderTechIcons } from '../config/functions';
 export default ({
@@ -137,7 +137,7 @@ export default ({
 						<AiFillGithub />
 					</a>
 					<a href={live} target="_blank" rel="noreferrer">
-						<AiOutlineDeploymentUnit />
+						<AiOutlineCloudServer />
 					</a>
 					{prevProject === '' ? (
 						<></>
