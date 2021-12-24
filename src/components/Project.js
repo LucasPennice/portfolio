@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { AiFillGithub, AiOutlineCloudServer } from 'react-icons/ai';
 import { CgArrowUpR, CgArrowDownR } from 'react-icons/cg';
 import { renderTechIcons } from '../config/functions';
+import ImageSlider from './ImageSlider';
 export default ({
 	project,
 	prevProject,
@@ -12,8 +13,18 @@ export default ({
 	projectsHeight,
 }) => {
 	const ref = useRef(null);
-	const { title, paragraphArray, github, live, d1, d2, m1, m2, tech_used } =
-		project;
+	const {
+		title,
+		paragraphArray,
+		github,
+		live,
+		d1,
+		d2,
+		m1,
+		m2,
+		tech_used,
+		imgArray,
+	} = project;
 	const [mobileImg, setMobileImg] = useState(m1);
 	const [mobileClass, setMobileClass] = useState('mobileImages behind');
 	const [mobileOpacity, setMobileOpacity] = useState(1);
@@ -155,7 +166,7 @@ export default ({
 					)}
 				</div>
 			</div>
-			<div className="projectImages">
+			{/* <div className="projectImages">
 				<img
 					onClick={() => {
 						changeImage(desktopImg, setDesktopImg, 'desktop');
@@ -174,7 +185,8 @@ export default ({
 					src={mobileImg}
 					style={{ opacity: mobileOpacity }}
 				/>
-			</div>
+			</div> */}
+			<ImageSlider imgArray={imgArray} />
 		</div>
 	);
 };

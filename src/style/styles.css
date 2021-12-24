@@ -1679,4 +1679,108 @@
   /* Safari 6.0 - 9.0 */
   filter: blur(5px);
 }
+
+.image_slider_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  position: relative;
+}
+
+.image_slider_container .before_btn,
+.image_slider_container .after_btn {
+  position: absolute;
+  top: calc(50% - 1rem);
+  z-index: 2;
+  background-color: white;
+  border-radius: 2px;
+  font-size: 2rem;
+  cursor: pointer;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  -webkit-box-shadow: 0 2px 5px gray;
+          box-shadow: 0 2px 5px gray;
+}
+
+.image_slider_container .before_btn:hover,
+.image_slider_container .after_btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.image_slider_container .before_btn {
+  left: 5px;
+}
+
+.image_slider_container .after_btn {
+  right: 5px;
+}
+
+.image_slider_container .slider_container {
+  position: relative;
+  width: 100%;
+  height: calc(50vw / 19 * 9);
+}
+
+.image_slider_container .slider_container .slider_img {
+  width: 100%;
+  position: absolute;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px gray;
+          box-shadow: 0 0 10px gray;
+}
+
+.image_slider_container .slider_container .show {
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.image_slider_container .circles_container {
+  position: absolute;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  bottom: 10px;
+}
+
+.image_slider_container .circles_container .circle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 5px gray;
+          box-shadow: 0 2px 5px gray;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+}
+
+.image_slider_container .circles_container .active {
+  background-color: black;
+}
+
+.image_slider_container .circles_container .inactive {
+  background-color: white;
+}
+
+@media (max-width: 660px) {
+  .image_slider_container {
+    margin-top: 1rem;
+    width: 90%;
+  }
+  .image_slider_container .slider_container {
+    height: calc(80vw / 16 * 9);
+  }
+}
 /*# sourceMappingURL=styles.css.map */

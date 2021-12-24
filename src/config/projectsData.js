@@ -25,6 +25,10 @@ export const projectsArray = [
 			'a full stack web app that allows the user to post, edit and delete a mock work proposal for their pets',
 			'used express.js for the routing, passport.js for authentication and MongoDB Atlas as the database',
 		],
+		imgArray: [
+			'https://i.imgur.com/IAEBksX.png',
+			'https://i.imgur.com/5noHwKZ.png',
+		],
 		d1: 'https://i.imgur.com/IAEBksX.png',
 		d2: 'https://i.imgur.com/5noHwKZ.png',
 		m1: 'https://i.imgur.com/5oBKfVV.png',
@@ -46,6 +50,10 @@ export const projectsArray = [
 			'a React web app that allows the user to search for any tv show and get detailed information on each one when clicked. It also allows the user to go watch the show by clicking the show’s title. To access the data I worked with TvMaze’s API.',
 			'Used Redux (& Thunk) to manage state and React-Router to control what component to render depending on the url.',
 		],
+		imgArray: [
+			'https://i.imgur.com/s9MHA1s.png',
+			'https://i.imgur.com/NNNtbL7.png',
+		],
 		d1: 'https://i.imgur.com/s9MHA1s.png',
 		d2: 'https://i.imgur.com/NNNtbL7.png',
 		m1: 'https://i.imgur.com/0HYfYSR.png',
@@ -66,6 +74,10 @@ export const projectsArray = [
 			'a React web app that allows the user to check the current weather, and forecast of any city. It also allows the user to toggle between fahrenheit and celsius by clicking on the current temperature and to check the temperature hour by hour hovering on the graph.',
 			'To access the weather data I worked with WeatherAPI’s API',
 			'Continued development by refactoring the code and implemented Redux for better state management.',
+		],
+		imgArray: [
+			'https://i.imgur.com/UOG6PwH.png',
+			'https://i.imgur.com/7Pwkgjt.png',
 		],
 		d1: 'https://i.imgur.com/UOG6PwH.png',
 		d2: 'https://i.imgur.com/7Pwkgjt.png',
