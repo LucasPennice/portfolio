@@ -1,7 +1,15 @@
 import Project from './Project';
 import { projectsArray } from '../config/projectsData';
+import { useEffect, useRef } from 'react';
 
-export default ({ position, setProjectsHeight, projectsHeight }) => {
+export default ({
+	position,
+	setProjectsHeight,
+	projectsHeight,
+	setSectionsHeight,
+	sectionsHeight,
+}) => {
+	const ref = useRef(null);
 	const getObjectPosition = (title, operation = 0) => {
 		let positionInArray = 0;
 
@@ -17,8 +25,15 @@ export default ({ position, setProjectsHeight, projectsHeight }) => {
 		}
 	};
 
+	useEffect(() => {
+		let heightArr = sectionsHeight;
+		heightArr[0] = ref.current.clientHeight;
+		setSectionsHeight(heightArr);
+		console.log(sectionsHeight);
+	}, []);
+
 	return (
-		<div id="projects">
+		<div id="projects" ref={ref}>
 			{projectsArray.map((project) => {
 				const { title } = project;
 				return (

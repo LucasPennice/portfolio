@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { useState } from 'react';
 import Portfolio from './Portfolio';
 import About from './About';
 import NavBar from './NavBar';
@@ -8,38 +9,31 @@ export default ({
 	position,
 	switchTheme,
 	setProjectsHeight,
+	sectionsHeight,
 	projectsHeight,
+	setSectionsHeight,
+	sectionOnScreen,
 }) => {
 	return (
 		<div className="mainPageDiv" id="mainPage">
 			<Router>
-				<NavBar switchTheme={switchTheme} />
-				{/* <div className="routeContainer">
-					<div className="componentContainer" id="componentContainer">
-						<Routes>
-							<Route
-								path="/"
-								element={
-									<Portfolio
-										position={position}
-										projectsHeight={projectsHeight}
-										setProjectsHeight={setProjectsHeight}
-									/>
-								}
-							/>
-							<Route path="/about" exact element={<About />} />
-							<Route path="/contact" exact element={<Contact />} />
-						</Routes>
-					</div>
-				</div> */}
+				<NavBar switchTheme={switchTheme} sectionOnScreen={sectionOnScreen} />
 			</Router>
 			<Portfolio
 				position={position}
 				projectsHeight={projectsHeight}
 				setProjectsHeight={setProjectsHeight}
+				sectionsHeight={sectionsHeight}
+				setSectionsHeight={setSectionsHeight}
 			/>
-			<About />
-			<Contact />
+			<About
+				setSectionsHeight={setSectionsHeight}
+				sectionsHeight={sectionsHeight}
+			/>
+			<Contact
+				setSectionsHeight={setSectionsHeight}
+				sectionsHeight={sectionsHeight}
+			/>
 		</div>
 	);
 };

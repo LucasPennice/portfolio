@@ -8,6 +8,8 @@ import { projectsArray } from '../config/projectsData';
 export default () => {
 	const [isFirstRender, setIsFirstRender] = useState(true);
 	const [position, setPosition] = useState(null);
+	const [sectionsHeight, setSectionsHeight] = useState([]);
+	const [sectionOnScreen, setSectionOnScreen] = useState(null);
 	const [projectsHeight, setProjectsHeight] = useState([]);
 
 	const currentProjectOnViewport = (scrollTop, clientHeight) => {
@@ -33,9 +35,22 @@ export default () => {
 		}
 	};
 
+	const currentSectionOnViewport = (scrollTop) => {
+		const h1 = sectionsHeight[0];
+		const h2 = h1 + sectionsHeight[1];
+		const h3 = h2 + sectionsHeight[2];
+		if (scrollTop <= h1) setSectionOnScreen(0);
+		if (scrollTop > h1 && scrollTop < h3) setSectionOnScreen(1);
+		if (scrollTop >= h3) setSectionOnScreen(2);
+	};
+
 	useEffect(() => {
 		window.addEventListener('scroll', (e) => {
 			currentProjectOnViewport(
+				e.target.scrollingElement.scrollTop,
+				e.target.scrollingElement.clientHeight
+			);
+			currentSectionOnViewport(
 				e.target.scrollingElement.scrollTop,
 				e.target.scrollingElement.clientHeight
 			);
@@ -44,6 +59,10 @@ export default () => {
 		return () => {
 			window.removeEventListener('scroll', (e) => {
 				currentProjectOnViewport(
+					e.target.scrollingElement.scrollTop,
+					e.target.scrollingElement.clientHeight
+				);
+				currentSectionOnViewport(
 					e.target.scrollingElement.scrollTop,
 					e.target.scrollingElement.clientHeight
 				);
@@ -63,6 +82,9 @@ export default () => {
 				setPosition={setPosition}
 				projectsHeight={projectsHeight}
 				setProjectsHeight={setProjectsHeight}
+				sectionOnScreen={sectionOnScreen}
+				sectionsHeight={sectionsHeight}
+				setSectionsHeight={setSectionsHeight}
 			/>
 		</div>
 	);

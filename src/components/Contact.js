@@ -4,10 +4,18 @@ import {
 	AiTwotoneFolderOpen,
 	AiOutlineWhatsApp,
 } from 'react-icons/ai';
+import { useRef, useEffect } from 'react';
 
-export default () => {
+export default ({ setSectionsHeight, sectionsHeight }) => {
+	const ref = useRef(null);
+	useEffect(() => {
+		let heightArr = sectionsHeight;
+		heightArr[2] = ref.current.clientHeight;
+		setSectionsHeight(heightArr);
+		console.log(sectionsHeight);
+	}, []);
 	return (
-		<div className="contactDiv" id="contact">
+		<div className="contactDiv" id="contact" ref={ref}>
 			<div className="myInfo">
 				<div>
 					<span>{`<name/>`}</span>Lucas Pennice

@@ -5,11 +5,19 @@ import {
 	backendLogosArray,
 	toolsLogosArray,
 } from '../config/about_tech';
+import { useEffect, useRef } from 'react';
 import { renderTechIcons } from '../config/functions';
 
-export default () => {
+export default ({ setSectionsHeight, sectionsHeight }) => {
+	const ref = useRef(null);
+	useEffect(() => {
+		let heightArr = sectionsHeight;
+		heightArr[1] = ref.current.clientHeight;
+		setSectionsHeight(heightArr);
+		console.log(sectionsHeight);
+	}, []);
 	return (
-		<div className="aboutContainer" id="about">
+		<div className="aboutContainer" id="about" ref={ref}>
 			<h1 className="aboutTitle">about me</h1>
 			<p className="aboutText">
 				My name is Lucas Pennice and I’m a MERN stack developer looking for an

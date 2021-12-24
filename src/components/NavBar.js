@@ -1,45 +1,18 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-
-export default ({ switchTheme }) => {
-	const [currentPage, setCurrentPage] = useState('/');
-	const onAnchorClick = (e) => {
-		console.log(e);
-	};
-	const onWhatSection = (id) => {
-		if (id !== currentPage) setCurrentPage(id);
-	};
-
+export default ({ sectionOnScreen }) => {
 	const isCurrentPage = (id) => {
-		if (currentPage === id) return 'currentClass';
+		if (sectionOnScreen === id) return 'currentClass';
 		return '';
 	};
 	return (
 		<nav className="navBar">
 			<div className="selectedDiv"></div>
-			<a
-				href="#projects"
-				onClick={(e) => {
-					onAnchorClick(e);
-					onWhatSection('/');
-				}}
-				className={isCurrentPage('/')}
-			>
+			<a href="#projects" className={isCurrentPage(0)}>
 				projects
 			</a>
-			<a
-				href="#about"
-				id="/about"
-				className={isCurrentPage('/about')}
-				onClick={() => onWhatSection('/about')}
-			>
+			<a href="#about" id="/about" className={isCurrentPage(1)}>
 				about
 			</a>
-			<a
-				href="#contact"
-				className={isCurrentPage('/contact')}
-				onClick={() => onWhatSection('/contact')}
-			>
+			<a href="#contact" className={isCurrentPage(2)}>
 				contact
 			</a>
 		</nav>
