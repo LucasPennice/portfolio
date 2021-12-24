@@ -11,26 +11,24 @@ export default () => {
 	const [projectsHeight, setProjectsHeight] = useState([]);
 
 	const currentProjectOnViewport = (scrollTop, clientHeight) => {
-		if (window.location.pathname === '/') {
-			let whosOnScreen = [];
+		let whosOnScreen = [];
 
-			let projCoord = buildProjectCoordinatesArray(
-				projectsArray,
-				scrollTop,
-				clientHeight,
-				projectsHeight
-			);
-			for (let p of projCoord) {
-				const { top, bottom } = p;
-				whosOnScreen.push((bottom - top) / clientHeight);
-			}
+		let projCoord = buildProjectCoordinatesArray(
+			projectsArray,
+			scrollTop,
+			clientHeight,
+			projectsHeight
+		);
+		for (let p of projCoord) {
+			const { top, bottom } = p;
+			whosOnScreen.push((bottom - top) / clientHeight);
+		}
 
-			let max = Math.max(...whosOnScreen);
+		let max = Math.max(...whosOnScreen);
 
-			for (let i = 0; i < whosOnScreen.length; i++) {
-				if (whosOnScreen[i] === max) {
-					setPosition(i);
-				}
+		for (let i = 0; i < whosOnScreen.length; i++) {
+			if (whosOnScreen[i] === max) {
+				setPosition(i);
 			}
 		}
 	};
