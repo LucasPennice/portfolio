@@ -29,10 +29,6 @@ export const projectsArray = [
 			'https://i.imgur.com/IAEBksX.png',
 			'https://i.imgur.com/5noHwKZ.png',
 		],
-		d1: 'https://i.imgur.com/IAEBksX.png',
-		d2: 'https://i.imgur.com/5noHwKZ.png',
-		m1: 'https://i.imgur.com/5oBKfVV.png',
-		m2: 'https://i.imgur.com/vAVLDdx.png',
 		github: 'https://github.com/LucasPennice/PetLinkedIn',
 		live: 'https://pet-work.herokuapp.com/',
 		tech_used: [
@@ -54,10 +50,6 @@ export const projectsArray = [
 			'https://i.imgur.com/s9MHA1s.png',
 			'https://i.imgur.com/NNNtbL7.png',
 		],
-		d1: 'https://i.imgur.com/s9MHA1s.png',
-		d2: 'https://i.imgur.com/NNNtbL7.png',
-		m1: 'https://i.imgur.com/0HYfYSR.png',
-		m2: 'https://i.imgur.com/H0Dlx7H.png',
 		github: 'https://github.com/LucasPennice/React-Redux-ShowSearch',
 		live: 'https://react-redux-show-search.vercel.app/',
 		tech_used: [
@@ -79,10 +71,6 @@ export const projectsArray = [
 			'https://i.imgur.com/UOG6PwH.png',
 			'https://i.imgur.com/7Pwkgjt.png',
 		],
-		d1: 'https://i.imgur.com/UOG6PwH.png',
-		d2: 'https://i.imgur.com/7Pwkgjt.png',
-		m1: 'https://i.imgur.com/SST0Gcy.png',
-		m2: 'https://i.imgur.com/eimJwJC.png',
 		github: 'https://github.com/LucasPennice/React-ReduxWeatherApp',
 		live: 'https://react-redux-weather-app-iota.vercel.app/',
 		tech_used: [
