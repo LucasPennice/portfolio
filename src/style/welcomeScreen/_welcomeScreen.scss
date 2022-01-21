@@ -1,3 +1,5 @@
+@use '../index/index' as *;
+
 .welcomeDiv {
 	height: 100vh;
 	@include center;

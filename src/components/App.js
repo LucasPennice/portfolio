@@ -1,4 +1,4 @@
-import styles from '../style/styles.css';
+import styles from '../dist/styles.css';
 import WelcomeScreen from './WelcomeScreen';
 import MainPage from './MainPage';
 import { buildProjectCoordinatesArray } from '../config/functions';

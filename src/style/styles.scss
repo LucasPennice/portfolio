@@ -1,10 +1,11 @@
+@forward './welcomeScreen/_welcomeScreen.scss';
+@forward './iconStyles/_iconStyles.scss';
+@forward './portfolioSection/_portfolio.scss';
+@forward './about/_about.scss';
+@forward './iconStyles/_iconStyles.scss';
+@forward './contact/_contact.scss';
+@use './index/index' as *;
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500&family=Montserrat:wght@100;200;300;400;500;600&display=swap');
-@import './mixins/_mixins.scss';
-@import './variables/_colors.scss';
-
-@import './animations/_animations.scss', './iconStyles/_iconStyles.scss',
-	'./welcomeScreen/_welcomeScreen.scss', './portfolioSection/_portfolio.scss',
-	'./about/_about.scss', './contact/_contact.scss';
 
 * {
 	padding: 0;

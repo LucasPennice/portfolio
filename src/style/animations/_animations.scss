@@ -1,3 +1,6 @@
+@use '../mixins/_mixins.scss' as *;
+@use '../variables/_colors.scss' as *;
+
 @keyframes squareAnim {
 	from {
 		border-radius: 0%;
