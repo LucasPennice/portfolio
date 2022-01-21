@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "welcomeScreen.scss"
+        "colors.scss"
     ],
     "names": [],
-    "file": "welcomeScreen.css"
+    "file": "colors.css"
 }

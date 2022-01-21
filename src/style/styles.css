@@ -1,105 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500&family=Montserrat:wght@100;200;300;400;500;600&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Gothic A1', sans-serif;
-  scroll-behavior: smooth;
-  -webkit-tap-highlight-color: transparent;
-}
-
-::-webkit-scrollbar {
-  width: 7px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: rgba(37, 38, 39, 0);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgba(37, 38, 39, 0.49);
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #252627;
-}
-
-#reactLogo:hover {
-  color: #61dbfb;
-}
-
-#reduxLogo:hover {
-  color: #764abd;
-}
-
-#routerLogo:hover {
-  color: #ca4245;
-}
-
-#jsLogo:hover {
-  color: #ead41c;
-}
-
-#htmlLogo:hover {
-  color: #d84923;
-}
-
-#sassLogo:hover {
-  color: #ca689b;
-}
-
-#postmanLogo:hover {
-  color: #e7663a;
-}
-
-#xdLogo:hover {
-  color: #f229b8;
-}
-
-#vscodeLogo:hover {
-  color: #379fe7;
-}
-
-#gitLogo:hover {
-  color: #e44b2f;
-}
-
-#bootstrapLogo:hover {
-  color: #7310ed;
-}
-
-#tailwindLogo:hover {
-  color: #15b4c1;
-}
-
-#nodeLogo:hover {
-  color: #89bb3c;
-}
-
-#expressLogo:hover {
-  color: #89bb3c;
-}
-
-#vercelLogo:hover {
-  color: #79ffe1;
-}
-
-#herokuLogo:hover {
-  color: #625d9e;
-}
-
-#mongoLogo:hover {
-  color: #3f9b38;
-}
-
-#passportLogo:hover {
-  color: #00b9f1;
-}
-
 @-webkit-keyframes squareAnim {
   from {
     border-radius: 0%;
@@ -112,7 +11,6 @@
     border-radius: 0%;
   }
 }
-
 @keyframes squareAnim {
   from {
     border-radius: 0%;
@@ -642,6 +540,78 @@
             transform: scale(1);
     color: #4062bb;
   }
+}
+
+#reactLogo:hover {
+  color: #61dbfb;
+}
+
+#reduxLogo:hover {
+  color: #764abd;
+}
+
+#routerLogo:hover {
+  color: #ca4245;
+}
+
+#jsLogo:hover {
+  color: #ead41c;
+}
+
+#htmlLogo:hover {
+  color: #d84923;
+}
+
+#sassLogo:hover {
+  color: #ca689b;
+}
+
+#postmanLogo:hover {
+  color: #e7663a;
+}
+
+#xdLogo:hover {
+  color: #f229b8;
+}
+
+#vscodeLogo:hover {
+  color: #379fe7;
+}
+
+#gitLogo:hover {
+  color: #e44b2f;
+}
+
+#bootstrapLogo:hover {
+  color: #7310ed;
+}
+
+#tailwindLogo:hover {
+  color: #15b4c1;
+}
+
+#nodeLogo:hover {
+  color: #89bb3c;
+}
+
+#expressLogo:hover {
+  color: #89bb3c;
+}
+
+#vercelLogo:hover {
+  color: #79ffe1;
+}
+
+#herokuLogo:hover {
+  color: #625d9e;
+}
+
+#mongoLogo:hover {
+  color: #3f9b38;
+}
+
+#passportLogo:hover {
+  color: #00b9f1;
 }
 
 .welcomeDiv {
@@ -1584,6 +1554,35 @@
 .contactDiv form button:hover {
   background-color: #f9f9f9;
   color: #252627;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Gothic A1', sans-serif;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(37, 38, 39, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(37, 38, 39, 0.49);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #252627;
 }
 
 .mainPageDiv {
